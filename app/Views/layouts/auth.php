@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?= lang('app.appName') | lang('app.appName') ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="#1b877a">
+    <meta name="theme-color" content="#806240">
     <title><?= $title ?> | <?= lang('app.appName') ?></title>
     <link rel="apple-touch-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">

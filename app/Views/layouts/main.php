@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?= lang('app.appName') . ' | ' . lang('location') ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="#1b877a">
+    <meta name="theme-color" content="#806240">
     <title><?= lang('app.appName') ?> | <?= $title ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
