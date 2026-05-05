@@ -1,49 +1,36 @@
-<?= $this->extend('layouts/home') ?>
+<?= $this->extend('layouts/auth') ?>
 
 <?= $this->section('content') ?>
 
-<section id="hero" class="hero-section" style="background-image: url('<?= base_url($carousel['image']) ?>');">
-    <div class="hero-overlay">
-        <div class="container text-center">
-            <?php if (session('lang') != 'ar') : ?>
-                <h1><span class="auto-typed"></span></h1>
-                <p class="lead"><?= $carousel['text'] ?></p>
-            <?php else : ?>
-                <!-- <h1><?= $carousel['title_ar'] ?></h1> -->
-                <h1><span class="auto-typed"></span></h1>
-                <p class="lead"><?= $carousel['text_ar'] ?></p>
-            <?php endif ?>
-            <div class="hero-ctas">
-                <a href="#admissions" class="btn btn-primary btn-lg"><?= lang('app.applyNow') ?></a>
-                <a href="#programs" class="btn btn-secondary btn-lg"><?= lang('app.exploreCourses') ?></a>
+<div class="content-body">
+    <section class="row flexbox-container">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
+                <div class="card border-grey border-lighten-3 m-0">
+                    <div class="card-header border-0">
+                        <div class="card-title text-center">
+                            <div>
+                                <a href="<?= base_url() ?>"><img src="<?= base_url('app-assets/images/logo/logo.png') ?>" alt="logo" height="180px"></a>
+                            </div>
+                        </div>
+                        <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span><?= getenv('APP_NAME') ?></span>
+                        </h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <?php if (session('isLoggedIn') != true) : ?>
+                            <a href="<?= base_url('login') ?>" class="btn btn-block btn-lg btn-secondary round mb-1"><?= lang('app.login') ?></a>
+                        <?php else : ?>
+                            <a href="<?= base_url('login') ?>" class="btn btn-block btn-lg btn-outline-success round mb-1"><b><?= lang('app.dashboard') ?></b></a>
+                        <?php endif ?>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center">
+                            <div class="text-center"><a href="<?= base_url() ?>" class="btn btn-sm btn-outline-purple round"><?= lang('app.appName') ?> | <?= lang('app.ourLocation') ?></a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-<?= $this->include('home/about') ?>
-<?= $this->include('home/impact') ?>
-<?= $this->include('home/admission') ?>
-<?= $this->include('home/contact') ?>
-<?= $this->endSection() ?>
-<?php
-foreach ($hero as $hr) {
-    if (session('lang') != 'ar') {
-        $data[] = $hr['title'];
-    } else {
-        $data[] = $hr['title_ar'];
-    }
-}
-// dd($data);
-?>
-<?= $this->section('scripts') ?>
-<script>
-    var typed = new Typed(".auto-typed", {
-        strings: <?= json_encode($data); ?>,
-        tpyeSpeed: 150,
-        backSpeed: 150,
-        loop: true,
-    })
-</script>
+    </section>
+</div>
 <?= $this->endSection() ?>
