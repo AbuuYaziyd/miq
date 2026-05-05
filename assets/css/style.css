@@ -1,0 +1,662 @@
+/* ----------------------------------------------------------------
+   0. CSS Reset and Base Styles
+---------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Using the Tajawal font family (which works well for English too) */
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f8f8;
+    /* Default text alignment for English */
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #004d40;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00796b;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ----------------------------------------------------------------
+   1. Utility & Layout Classes
+---------------------------------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+.bg-dark {
+    background-color: #004d40;
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* CSS Grid for Multi-Column Layouts (Desktop) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* ----------------------------------------------------------------
+   2. Buttons (CTAs)
+---------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px 10px 0 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #f9a825;
+    color: #1a1a1a;
+}
+
+.btn-primary:hover {
+    background-color: #ffc107;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 28px;
+}
+
+.hero-section .btn-secondary {
+    border-color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1em;
+}
+
+/* ----------------------------------------------------------------
+   3. Header & Navigation (LTR layout)
+---------------------------------------------------------------- */
+.main-header {
+    background-color: #004d40;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+.main-header.scrolled {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+/* Spacing between links is now on the left side in LTR */
+.main-nav li {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.main-nav a:hover {
+    border-bottom: 2px solid #f9a825;
+}
+
+/* Menu toggle button for mobile, hidden on desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* ----------------------------------------------------------------
+   4. Hero Section (Unchanged)
+---------------------------------------------------------------- */
+.hero-section {
+    background: url('assets/img/hero-background.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-section .lead {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* ----------------------------------------------------------------
+   5. Mission & Value Proposition
+---------------------------------------------------------------- */
+.value-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.value-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-box i {
+    font-size: 2.5em;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+/* ----------------------------------------------------------------
+   6. Programs & Faculties
+---------------------------------------------------------------- */
+.program-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.program-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.program-card h3 {
+    padding: 15px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Arrow points right and text aligns left in LTR */
+.program-card a {
+    display: block;
+    padding: 0 15px 15px;
+    font-weight: bold;
+    color: #f9a825;
+    text-align: left;
+}
+
+/* ----------------------------------------------------------------
+   7. Impact & Testimonials (LTR layout)
+---------------------------------------------------------------- */
+.impact-section {
+    padding: 80px 0;
+}
+
+/* STATS */
+.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3em;
+    font-weight: 700;
+    color: #f9a825;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+/* TESTIMONIALS SLIDER STYLES */
+
+.testimonials-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.testimonials-slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    transition: transform 1s ease-in-out;
+}
+
+.testimonial {
+    font-style: italic;
+    font-size: 1.2em;
+    padding: 20px;
+    /* Border is on the left side in LTR */
+    border-left: 5px solid #f9a825;
+    border-right: none;
+    flex-shrink: 0;
+    width: 800px;
+    /* Margin on the right to separate items in LTR */
+    margin-right: 20px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.testimonial cite {
+    display: block;
+    text-align: left;
+    font-style: normal;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #ccc;
+}
+
+/* ----------------------------------------------------------------
+   8. Admissions CTA
+---------------------------------------------------------------- */
+.admissions-cta {
+    background-color: #00796b;
+    color: #fff;
+}
+
+.admissions-info-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.date-badge {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.admissions-cta .fa-calendar-alt {
+    color: #f9a825;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/* ----------------------------------------------------------------
+   9. Contact Us Section Styles (LTR layout)
+---------------------------------------------------------------- */
+.contact-section {
+    background-color: #fff;
+}
+
+.contact-form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #004d40;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1em;
+    /* Enforce Left-to-Right text alignment for form inputs */
+    text-align: left;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    color: #004d40;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5em;
+    color: #f9a825;
+    margin-right: 15px;
+    margin-left: 0;
+    padding-top: 3px;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.info-item small {
+    display: block;
+    color: #555;
+    line-height: 1.4;
+}
+
+.contact-form .btn {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+
+/* ----------------------------------------------------------------
+   10. Footer (LTR layout)
+---------------------------------------------------------------- */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #ddd;
+    padding-top: 50px;
+}
+
+.main-footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.main-footer a {
+    color: #ddd;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.main-footer a:hover {
+    color: #f9a825;
+}
+
+.social-media a {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.copyright {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+
+/* ----------------------------------------------------------------
+   11. Media Queries (Responsiveness)
+---------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ❗ FIX: Mobile Header - non-centralized (LTR) */
+    .header-content {
+        /* Distributes space: logo on the left, button on the right */
+        justify-content: space-between;
+        /* Reset flex direction and text align for the container */
+        flex-direction: row;
+        text-align: left;
+        /* LTR alignment */
+    }
+
+    /* Show the hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the desktop navigation links by default */
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Below the header */
+        left: 0;
+        /* Align to the left for LTR */
+        background-color: #004d40;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Class added by JS when menu is open */
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    /* Resetting directional margins for mobile nav */
+    .main-nav li {
+        margin: 0;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px 20px;
+        border-bottom: none;
+        text-align: left;
+        /* Ensure links align left */
+    }
+
+    .main-nav a:hover {
+        background-color: #00796b;
+        border-bottom: none;
+    }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+    }
+
+    .testimonials-container {
+        max-width: 90%;
+    }
+
+    .testimonial {
+        width: calc(90vw - 40px);
+        max-width: 800px;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
+    .btn {
+        margin: 5px;
+    }
+
+    /* For Contact Section on Tablets/smaller Laptops */
+    .contact-section .grid-2 {
+        grid-template-columns: 1fr;
+    }/* 1. Basic Setup for the Dropdown Container */
+    .main-nav .language-dropdown {
+        /* Required to position the sub-menu relative to this item */
+        position: relative;
+    }
+    
+    /* 2. Style the Dropdown Menu (The UL) */
+    .main-nav .language-dropdown .dropdown-menu {
+        /* Hide the menu by default */
+        display: none;
+    
+        /* Position the menu absolutely under the toggle link */
+        position: absolute;
+        top: 100%;
+        /* Places it directly below the parent LI */
+        right: 0;
+        /* Aligns the right edge of the dropdown with the right edge of the toggle */
+    
+        /* Basic styling */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 150px;
+        background-color: #fff;
+        /* White background */
+        border: 1px solid #ccc;
+        /* Light border */
+        z-index: 1000;
+        /* Ensure it appears above other elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+    }
+    
+    /* 3. Style the Menu Items and Links */
+    .main-nav .language-dropdown .dropdown-menu li a {
+        /* Reset styles to look like a link */
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        white-space: nowrap;
+        /* Prevents text from wrapping */
+    }
+    
+    /* Hover effect for individual links */
+    .main-nav .language-dropdown .dropdown-menu li a:hover {
+        background-color: #f5f5f5;
+        /* Light grey background on hover */
+        color: #007bff;
+        /* Highlight text color (adjust to your university's color) */
+    }
+    
+    /* 4. Show the Menu on Hover */
+    /* When the main list item is hovered, show the dropdown menu */
+    .main-nav .language-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

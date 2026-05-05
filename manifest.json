@@ -1,0 +1,28 @@
+{
+  "short_name": "مركز ابن القيم",
+  "name": "مركز ابن القيم",
+  "icons": [
+    {
+      "src": "./app-assets/images/logo/logo.png",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./app-assets/images/logo/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./app-assets/images/logo/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "./login",
+  "scope": "." ,
+  "background_color": "#1b877a",
+  "display": "standalone",
+  "theme_color": "#004c3f",
+  "description": "مركز ابن القيم - كغوما - تنزانيا"
+}

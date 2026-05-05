@@ -1,0 +1,98 @@
+DEBUG - 2025-10-04 09:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 09:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 09:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 09:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 09:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 09:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 10:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-04 10:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:33:44 --> ErrorException: Undefined variable $yr
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 31.
+ 1 APPPATH\Views\result\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $yr', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:33:55 --> ErrorException: Undefined variable $yr
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 31.
+ 1 APPPATH\Views\result\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $yr', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:33:58 --> ErrorException: Undefined variable $yr
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 31.
+ 1 APPPATH\Views\result\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $yr', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:34:09 --> ErrorException: Undefined variable $crs
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 45.
+ 1 APPPATH\Views\result\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $crs', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:34:17 --> ErrorException: Undefined variable $crs
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 45.
+ 1 APPPATH\Views\result\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $crs', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-04 10:34:19 --> ErrorException: Undefined variable $crs
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 45.
+ 1 APPPATH\Views\result\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $crs', 'C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\muzani\\app\\Views\\result\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 5 APPPATH\Controllers\ResultController.php(47): view('result/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-04 10:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

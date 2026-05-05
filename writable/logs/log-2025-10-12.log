@@ -1,0 +1,2068 @@
+DEBUG - 2025-10-12 00:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:24:59 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:26:00 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:26:05 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:26:52 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Y', 1760216400, 'sw')
+ 4 APPPATH\Views\home\admission.php(27): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Y', 'sw')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:26:59 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:28:57 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:29:47 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, null)
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:31:49 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 00:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:32:31 --> ErrorException: Undefined variable $hjr
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 28.
+ 1 APPPATH\Views\home\admission.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hjr', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 5 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 9 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:32:46 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:32:52 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 00:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 00:38:22 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:23:00 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:26:03 --> Error: Call to undefined method App\Libraries\Hijri::strToHijri()
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 29.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 4 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:28:39 --> Error: Call to undefined method App\Libraries\Hijri::GeToHijr()
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 29.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 4 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:36:06 --> Error: Class "App\Libraries\Hijri\datetime" not found
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 6.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 4 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:42:42 --> Error: Call to a member function format() on null
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 10.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 4 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:49:29 --> Error: Call to undefined method App\Libraries\Hijri::setDateHijri()
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 10.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 4 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:53:36 --> ErrorException: Undefined variable $str
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 10.
+ 1 APPPATH\Views\home\admission.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $str', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 5 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 9 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:55:22 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:55:43 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:56:40 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(29): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:58:48 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(29): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:59:22 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1760216400, 'ar')
+ 4 APPPATH\Views\home\admission.php(29): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F Yهـ', 'ar')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:59:39 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Y', 1760216400, 'sw')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F Y', 'sw')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 06:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 06:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 06:59:40 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: /]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Y', 1760216400, 'sw')
+ 4 APPPATH\Views\home\admission.php(28): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F Y', 'sw')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 8 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 9 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+10 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+12 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 07:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 07:01:52 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 10.
+ 1 APPPATH\Views\home\admission.php(10): date('d-m-Y', '12-10-2002')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 5 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 9 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 07:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 07:02:15 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 10.
+ 1 APPPATH\Views\home\admission.php(10): date('d-m-Y', '12-10-2002')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 5 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 9 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 07:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 07:05:47 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: /]
+in APPPATH\Views\home\admission.php on line 28.
+ 1 APPPATH\Views\home\admission.php(28): date('j-m-Y', '2025-12-15')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\admission.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('home/admission', null, true)
+ 5 APPPATH\Views\home\index.php(26): CodeIgniter\View\View->include('home/admission')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home/index', [], true)
+ 9 APPPATH\Controllers\Home.php(18): view('home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 07:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 07:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 08:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:25:37 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: login]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 19:25:52 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: login]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('login', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-12 19:26:00 --> CSRF token verified.
+DEBUG - 2025-10-12 19:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:31:46 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1602363600, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('11-10-2020', 'l, d F Yهـ', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:32:01 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F Yهـ', 1602363600, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('11-10-2020', 'l, d F Yهـ', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:32:55 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F yهـ', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d F yهـ', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:33:09 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F yهـ', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F yهـ', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:33:29 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F y', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:34:01 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d F y', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('2025-10-12', 'l, d F y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:36:31 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:36:41 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760289900, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:36:50 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:37:04 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:37:55 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('2025-10-12', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:38:15 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('2025-10-12', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:38:54 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:39:18 --> ArgumentCountError: date() expects at most 2 arguments, 3 given
+[Method: GET, Route: test]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): date('j-m-Y', 1760216400, 'sw')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:39:49 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:40:07 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:40:31 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, 'sw')
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:42:16 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 984258000, 'sw')
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('11-03-2001', 'y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:42:36 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'sw')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 984258000, 'sw')
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('2001-03-11', 'y', 'sw')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:43:08 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 984258000, 'ar')
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('2001-03-11', 'y', 'ar')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:43:50 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'ar')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 984258000, 'ar')
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('2001-03-11', 'y', 'ar')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:47:02 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760289780, null)
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('2023', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 19:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 19:47:28 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 19:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:14:59 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:15:21 --> TypeError: gregoriantojd(): Argument #1 ($month) must be of type int, string given
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 119.
+ 1 APPPATH\Libraries\Hijri.php(119): gregoriantojd('y', '12-10-2025', 1976)
+ 2 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->GeToHijr('12-10-2025', 'y')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:15:58 --> ErrorException: Undefined array key -1
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 130.
+ 1 APPPATH\Libraries\Hijri.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 130)
+ 2 APPPATH\Controllers\Home.php(53): App\Libraries\Hijri->GeToHijr(2025)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:19:18 --> Error: Call to a member function format() on string
+[Method: GET, Route: test]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:19:37 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:21:49 --> ErrorException: Undefined array key -1
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 130.
+ 1 APPPATH\Libraries\Hijri.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 130)
+ 2 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->GeToHijr(2025)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:22:08 --> TypeError: gregoriantojd(): Argument #2 ($day) must be of type int, string given
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 119.
+ 1 APPPATH\Libraries\Hijri.php(119): gregoriantojd(2, '12-10-2025', 1976)
+ 2 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->GeToHijr('12-10-2025')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:22:22 --> TypeError: gregoriantojd(): Argument #2 ($day) must be of type int, string given
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 119.
+ 1 APPPATH\Libraries\Hijri.php(119): gregoriantojd(2, '12, 10, 2025', 1976)
+ 2 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->GeToHijr('12, 10, 2025')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:23:05 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:24:21 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d-m-Y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d-m-Y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:24:40 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d-m-Y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(51): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d-m-Y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:24:47 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:25:03 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d-m-y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d-m-y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:25:13 --> ErrorException: Undefined array key "sh.day.0"
+[Method: GET, Route: test]
+in APPPATH\Libraries\Hijri.php on line 165.
+ 1 APPPATH\Libraries\Hijri.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sh.day.0"', 'C:\\xampp\\htdocs\\miuz\\app\\Libraries\\Hijri.php', 165)
+ 2 APPPATH\Libraries\Hijri.php(92): App\Libraries\Hijri->getLang('sh.day.', '0', 'id')
+ 3 APPPATH\Libraries\Hijri.php(153): App\Libraries\Hijri->date('l, d-m-y', 1760216400, null)
+ 4 APPPATH\Controllers\Home.php(52): App\Libraries\Hijri->strToHijri('12-10-2025', 'l, d-m-y')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:26:05 --> ErrorException: Undefined array key "yaer"
+[Method: GET, Route: test]
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "yaer"', 'C:\\xampp\\htdocs\\miuz\\app\\Controllers\\Home.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->test()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-12 20:36:24 --> CSRF token verified.
+DEBUG - 2025-10-12 20:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:37:09 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: timetable/mustawa/1]
+in APPPATH\Views\timetable\mustawa.php on line 32.
+ 1 APPPATH\Views\timetable\mustawa.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\timetable\\mustawa.php', 32)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\timetable\\mustawa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('timetable/mustawa', [], true)
+ 5 APPPATH\Controllers\TimetableController.php(43): view('timetable/mustawa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TimetableController->mustawa('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TimetableController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:39:43 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: period/show/2]
+in APPPATH\Views\period\show.php on line 9.
+ 1 APPPATH\Views\period\show.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\period\\show.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\period\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('period/show', [], true)
+ 5 APPPATH\Controllers\PeriodController.php(94): view('period/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PeriodController->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeriodController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:39:49 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: period/show/1]
+in APPPATH\Views\period\show.php on line 9.
+ 1 APPPATH\Views\period\show.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\period\\show.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\period\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('period/show', [], true)
+ 5 APPPATH\Controllers\PeriodController.php(94): view('period/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PeriodController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeriodController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:41:11 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: year/show/1]
+in APPPATH\Views\year\show.php on line 14.
+ 1 APPPATH\Views\year\show.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\show.php', 14)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('year/show', [], true)
+ 5 APPPATH\Controllers\YearController.php(90): view('year/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\YearController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\YearController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:41:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: year]
+in APPPATH\Views\year\index.php on line 44.
+ 1 APPPATH\Views\year\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('year/index', [], true)
+ 5 APPPATH\Controllers\YearController.php(20): view('year/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\YearController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\YearController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:41:18 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: year]
+in APPPATH\Views\year\index.php on line 44.
+ 1 APPPATH\Views\year\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('year/index', [], true)
+ 5 APPPATH\Controllers\YearController.php(20): view('year/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\YearController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\YearController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-12 20:43:37 --> CSRF token verified.
+DEBUG - 2025-10-12 20:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:43:37 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: year]
+in APPPATH\Views\year\index.php on line 45.
+ 1 APPPATH\Views\year\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('year/index', [], true)
+ 5 APPPATH\Controllers\YearController.php(20): view('year/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\YearController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\YearController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 20:46:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: year]
+in APPPATH\Views\year\index.php on line 66.
+ 1 APPPATH\Views\year\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\year\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('year/index', [], true)
+ 5 APPPATH\Controllers\YearController.php(20): view('year/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\YearController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\YearController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 20:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-12 20:51:48 --> CSRF token verified.
+DEBUG - 2025-10-12 20:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-12 20:52:11 --> CSRF token verified.
+DEBUG - 2025-10-12 20:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 20:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:03:38 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:04:07 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:04:12 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:04:22 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:05:12 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:05:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:06:17 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(31): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:07:37 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: result]
+in APPPATH\Models\Year.php on line 53.
+ 1 APPPATH\Models\Year.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Models\\Year.php', 53)
+ 2 APPPATH\Views\result\index.php(32): App\Models\Year->year('3')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\result\\index.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 6 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:09:20 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: result]
+in APPPATH\Views\result\index.php on line 26.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('result/index', [], true)
+ 4 APPPATH\Controllers\ResultController.php(46): view('result/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ResultController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ResultController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:24:19 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Subject::class
+[Method: GET, Route: course/class/1/9]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Views\course\class.php(14): CodeIgniter\Model->__call('class', [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\course\\class.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('course/class', [], true)
+ 5 APPPATH\Controllers\CourseController.php(216): view('course/class', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CourseController->class('1', '9')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:25:22 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Subject::class
+[Method: GET, Route: course/class/1/9]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Views\course\class.php(14): CodeIgniter\Model->__call('class', [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\course\\class.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('course/class', [], true)
+ 5 APPPATH\Controllers\CourseController.php(216): view('course/class', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CourseController->class('1', '9')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:27:59 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: subject/course/48]
+in APPPATH\Views\subject\course.php on line 4.
+ 1 APPPATH\Views\subject\course.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('subject/course', [], true)
+ 5 APPPATH\Controllers\SubjectController.php(33): view('subject/course', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->course('48')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-12 21:30:20 --> mysqli_sql_exception: Unknown column 'subject_id' in 'where clause' in C:\xampp\htdocs\miuz\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\miuz\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\miuz\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\miuz\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\miuz\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\miuz\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\miuz\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\miuz\app\Controllers\SubjectController.php(326): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\miuz\system\CodeIgniter.php(933): App\Controllers\SubjectController->class('48')
+#8 C:\xampp\htdocs\miuz\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+#9 C:\xampp\htdocs\miuz\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\miuz\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\miuz\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\miuz\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-10-12 21:30:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'subject_id' in 'where clause'
+[Method: GET, Route: subject/class/48]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `attendances`
+WHERE `date` = :date:
+AND `subject_id` = :subject_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\SubjectController.php(326): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->class('48')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 21:30:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'subject_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `attendances`
+WHERE `date` = \'2025-10-12\'
+AND `subject_id` = \'48\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `attendances`
+WHERE `date` = \'2025-10-12\'
+AND `subject_id` = \'48\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `attendances`
+WHERE `date` = :date:
+AND `subject_id` = :subject_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\SubjectController.php(326): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->class('48')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 21:30:20 --> [Caused by] mysqli_sql_exception: Unknown column 'subject_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `attendances`
+WHERE `date` = \'2025-10-12\'
+AND `subject_id` = \'48\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `attendances`
+WHERE `date` = \'2025-10-12\'
+AND `subject_id` = \'48\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `attendances`
+WHERE `date` = \'2025-10-12\'
+AND `subject_id` = \'48\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `attendances`
+WHERE `date` = :date:
+AND `subject_id` = :subject_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\SubjectController.php(326): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->class('48')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:31:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "subject/class.php"
+[Method: GET, Route: subject/class/48]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subject/class.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('subject/class', [], true)
+ 3 APPPATH\Controllers\SubjectController.php(329): view('subject/class', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->class('48')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:32:24 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:32:31 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:32:45 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:33:00 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:33:24 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:33:27 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:34:57 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:35:10 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:35:19 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 100.
+ 1 APPPATH\Views\school\show.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 100)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:36:20 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 100.
+ 1 APPPATH\Views\school\show.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 100)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:37:03 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: school/show/1]
+in APPPATH\Views\school\show.php on line 99.
+ 1 APPPATH\Views\school\show.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php', 99)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\school\\show.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('school/show', [], true)
+ 5 APPPATH\Controllers\SchoolController.php(53): view('school/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SchoolController->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SchoolController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:38:52 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: subject/course/48]
+in APPPATH\Views\subject\course.php on line 4.
+ 1 APPPATH\Views\subject\course.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('subject/course', [], true)
+ 5 APPPATH\Controllers\SubjectController.php(33): view('subject/course', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->course('48')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-12 21:38:54 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: subject/course/48]
+in APPPATH\Views\subject\course.php on line 4.
+ 1 APPPATH\Views\subject\course.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\miuz\\app\\Views\\subject\\course.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('subject/course', [], true)
+ 5 APPPATH\Controllers\SubjectController.php(33): view('subject/course', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SubjectController->course('48')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-12 21:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-12 21:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
