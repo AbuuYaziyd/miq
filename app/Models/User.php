@@ -76,17 +76,17 @@ class User extends Model
         $usr = new User();
         $hjr = new Hijri();
 
-        $query = $usr->where('fn', 'student')->orderBy('id', 'desc')->first();
+        $query = $usr->where('fn', 'teacher')->orderBy('id', 'desc')->first();
         $hijri = $hjr->GeToHijr(date('d'), date('m'), date('Y'));
         // dd($hijri, $query);
 
         if ($query != null) {
             $invc = $query['username'];
-            $invc = substr($invc, 6, 10);
+            $invc = substr($invc, 3, 6);
             $invc = $invc + 1;
-            $username = 1 . substr($hijri['year'], 2) . sprintf('%02s', $hijri['month']) . date("s") . sprintf('%03s', $invc);
+            $username = 106 . sprintf('%03s', $invc);
         } else {
-            $username = 1 . substr($hijri['year'], 2) . sprintf('%02s', $hijri['month']) . date("s") . sprintf('%03s', 1);
+            $username = 106 . sprintf('%03s', 1);
         }
         // dd($username);
 

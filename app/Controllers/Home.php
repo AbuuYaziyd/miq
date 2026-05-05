@@ -2,8 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\Admin;
-use App\Models\Result;
 use App\Models\Setting;
 use App\Models\Website;
 
@@ -45,25 +43,6 @@ class Home extends BaseController
 
     function test()
     {
-        $adm = new Admin();
-        $res = new Result();
-
-        $class_id = 3;
-        $result = $adm->findAll();
-        foreach ($result as $d) {
-            for ($i=18; $i <= 26; $i++) {
-                $theRes = $res->where(['course_id' => $class_id, 'subject_id' => $i, 'student_id' => $d['student_id']])->first();
-                // dd($theRes, $d[$i] - $theRes['course']); 
-                $data = [
-                    'final' => ($d[$i] - $theRes['course']),
-                    'final_status' => 'marked'
-                ];
-
-                // $res->update($theRes['id'], $data);
-            }
-        }
-        dd($result, $result['0'][20], $data);
-
         dd('test');
     }
 }
