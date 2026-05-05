@@ -1174,10 +1174,10 @@ select.form-control {
     color : #FFFFFF;
   }
   [data-menu='vertical-menu-modern'] .navbar-dark .navbar-container .navbar-nav .nav-link, [data-menu='vertical-menu-modern'] .navbar-semi-dark .navbar-container .navbar-nav .nav-link {
-    color : #2C343B;
+    color : #806240;
   }
   [data-menu='vertical-menu-modern'] .navbar-light .navbar-header .navbar-nav .nav-link {
-    color : #2C343B;
+    color : #806240;
   }
   [data-menu='vertical-menu-modern'] .navbar-header .navbar-nav .open-navbar-container, [data-menu='vertical-menu-modern'] .navbar-header .navbar-nav .nav-menu-main {
     padding : 1rem;
@@ -1201,7 +1201,7 @@ select.form-control {
 }
 
 .navbar-dark {
-  background : #2C343B;
+  background : #806240;
 }
 .navbar-dark .navbar-brand {
   color : #FFFFFF !important;
@@ -1210,11 +1210,11 @@ select.form-control {
   color : #FFFFFF !important;
 }
 .navbar-dark.navbar-horizontal {
-  background : #2C343B;
+  background : #806240;
 }
 .navbar-dark .nav-search .btn-secondary {
   color : #FFFFFF;
-  background : #2C343B;
+  background : #806240;
 }
 .navbar-dark .nav-search .form-control {
   color : #FFFFFF;
@@ -1233,7 +1233,7 @@ select.form-control {
   background : #FFFFFF;
 }
 .navbar-semi-dark .navbar-header {
-  background : #2C343B;
+  background : #806240;
 }
 .navbar-semi-dark .navbar-header .brand-text {
   color : #FFFFFF;
