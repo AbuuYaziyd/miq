@@ -275,7 +275,7 @@ class ResultController extends BaseController
                 $data = [
                     $exam . '_marks' => $total_marks[$exam],
                     $exam . '_gpa' => $exam_gpa,
-                    'total' => $total,
+                    'marks' => $total,
                 ];
                 // dd($data);
 
@@ -358,7 +358,7 @@ class ResultController extends BaseController
         $act->addActivity(session('id'), 'Position Calculation', 'Position for '. $exam . ' semester results was Assigned and Saved Successfully!');
 
         if ($exam == 'final') {
-            $p = $gpa->where(['school_id' => $school_id, 'course_id' => $id, 'year_id' => $year_id, 'position' => null])->orderBy('total', 'desc')->findAll();
+            $p = $gpa->where(['school_id' => $school_id, 'course_id' => $id, 'year_id' => $year_id, 'position' => null])->orderBy('marks', 'desc')->findAll();
             // dd($p, $exam);
 
             foreach ($p as $key => $d) {
