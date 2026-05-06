@@ -38,26 +38,35 @@ class GpaController extends BaseController
         return view('gpa/class', $data);    
     }
 
-    public function kashf($id, $course_id)
+    public function kashf($id, $fasl)
     {
-        // dd($course_id, $id);
+        // dd($fasl, $id);
         $gpa = new Gpa();
         $set = new Setting();
-        $res = new Result();
-        $usr = new User();
-        $hjr = new Hijri();
 
-        $data['title'] = lang('app.results');
-        $data['user'] = $usr->find($id);
-        $data['student_gpa'] = $gpa->where('student_id', $id)->orderBy('course_id', 'asc')->findAll();
-        $data['mudir'] = $set->where('name', 'mudir')->first();
-        $data['course_id'] = $course_id;
-        $data['hjr'] = $hjr;
+        $data['title'] = lang('app.academicProgress');
         $data['gpa'] = $gpa;
-        $data['res'] = $res;
+        $data['mudir'] = $set->where('name', 'mudir')->first();
+        $data['taalim'] = $set->where('name', 'taalim')->first();
+        $data['gpas'] =  $gpa->where(['student_id' => $id, 'course_id' => $fasl])->first();
         // dd($data);
 
         return view('gpa/kashf', $data);
+    }
+
+    function progress($id)
+    {
+        $gpa = new Gpa();
+        $set = new Setting();
+
+        $data['title'] = lang('app.academicProgress');
+        $data['gpa'] = $gpa;
+        $data['mudir'] = $set->where('name', 'mudir')->first();
+        $data['taalim'] = $set->where('name', 'taalim')->first();
+        $data['gpas'] =  $gpa->where('student_id', $id)->orderBy('course_id', 'asc')->findAll();
+        // dd($data);
+
+        return view('gpa/progress', $data);
     }
 
     // public function edit()
@@ -159,112 +168,6 @@ class GpaController extends BaseController
 
         return view('gpa/view', $data);
     }
-
-    // public function make($id)
-    // {
-    //     $res = new Result();
-    //     $user = new User();
-    //     $sub = new Subject();
-    //     $class = new Academy();
-    //     $year = new Year();
-    //     $gpa = new Gpa();
-    //     $act = new ActivityLog();
-
-    //     $sc = $class->find($id)['school_id'];
-    //     $y = $year->where('current', 1)->first()['id'];
-    //     $subjects = $sub->where('class_id', $id)->countAllResults();
-    //     $students = $user->where(['level' => $id, 'role' => 'student'])->findAll();
-
-    //     foreach ($students as $usr) {
-    //         // Total Marks
-    //         $marks = $gpa->sum($usr['id'], $id);
-    //         //Points 
-    //         $pt = $res->where(['student_id' => $usr['id'], 'class_id' => $id])->findAll();
-    //         $p = 0;
-    //         foreach ($pt as $crs) {
-    //             $point = ($res->grade(($crs['course'] + $crs['final']))['point']);
-    //             $p = $p + $point;
-    //         }
-
-    //         $muadala = ($marks / (($subjects) * 100)) * 5;
-    //         $data = [
-    //             'student_id' => $usr['id'],
-    //             'class_id' => $id,
-    //             'year_id' => $y,
-    //             'school_id' => $sc,
-    //             'malaf' => $usr['malaf'],
-    //             'marks' => $marks,
-    //             'gpa' => $muadala,
-    //             'point' => $p,
-    //             'subjects' => $subjects,
-    //             'number_of_students' => count($students),
-    //             'link' => bin2hex(random_bytes(20)),
-    //         ];
-    //         // dd($data);
-
-    //         $gpa->save($data);
-
-    //         $all_results = $res->where(['status' => null, 'student_id' => $usr['id']])->findAll();
-
-    //         foreach ($all_results as $r) {
-    //             foreach ($r as $re) {
-    //                 $result = $res->find($re['id']);
-    //                 $d = ['status' => 'gpa'];
-    //                 $res->update($result['id'], $d);
-    //             }
-    //         }
-    //     }
-    //     // dd($data);
-    //     // dd($all);
-
-    //     $act->addActivity(session('id'), 'GPA Calculation', 'GPA was Calculated and Saved Successfully!');
-
-    //     return redirect()->to('gpa/view/' . $id . '/' . $y)->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-    // }
-
-    // function position($id)
-    // {
-    //     $year = new Year();
-    //     $gpa = new Gpa();
-    //     $act = new ActivityLog();
-
-    //     $y = $year->where('current', 1)->first()['id'];
-
-    //     $p = $gpa->where(['class_id' => $id, 'year_id' => $y])->orderBy('marks', 'desc')->findAll();
-
-    //     // dd($p);
-    //     foreach ($p as $key => $d) {
-    //         $dt = ['position' => $key + 1, 'id' => $d['id']];
-
-    //         $gpa->update($d['id'], $dt);
-    //     }
-    //     // dd($dt);
-
-    //     $act->addActivity(session('id'), 'Position Calculation', 'Position was Assigned and Saved Successfully!');
-
-    //     return redirect()->to('gpa/view/' . $id . '/' . $y)->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-    // }
-
-    // public function all($id)
-    // {
-    //     // dd($id);
-    //     $gpa = new Gpa();
-    //     $set = new Setting();
-    //     $res = new Result();
-    //     $usr = new User();
-    //     $hjr = new Hijri();
-
-    //     $data['title'] = lang('app.results');
-    //     $data['user'] = $usr->find($id);
-    //     $data['gpa'] = $gpa->where('student_id', $id)->orderBy('class_id', 'asc')->findAll();
-    //     $data['mudir'] = $set->where('name', 'mudir')->first();
-    //     $data['g'] = $gpa;
-    //     $data['res'] = $res;
-    //     $data['hjr'] = $hjr;
-    //     // dd($data);
-
-    //     return view('gpa/all', $data);
-    // }
 
     // public function search($link)
     // {

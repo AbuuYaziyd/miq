@@ -5,45 +5,43 @@
         <div class="col-12">
             <ul class="nav nav-pills nav-fill nav-topline justify-content-center">
                 <li class="nav-item">
+                    <a class="nav-link" id="base-fasl" data-toggle="tab" aria-controls="fasl" href="#fasl" aria-expanded="false"><?= lang('app.acYear') ?></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" id="base-fasl1" data-toggle="tab" aria-controls="fasl1" href="#fasl1" aria-expanded="true"><?= lang('app.fasli1') ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="base-fasl2" data-toggle="tab" aria-controls="fasl2" href="#fasl2" aria-expanded="false"><?= lang('app.fasli2') ?></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="base-fasl" data-toggle="tab" aria-controls="fasl" href="#fasl" aria-expanded="false"><?= lang('app.acYear') ?></a>
-                </li>
             </ul>
             <div class="tab-content pt-1 border-grey border-lighten-2 border-0-top">
                 <div role="tabpanel" class="tab-pane active" id="fasl1" aria-expanded="true" aria-labelledby="base-fasl1">
                     <div class="col-12">
-                        <?php if ((session('role') == 'admin') && $gpa != null) : ?>
-                            <?php if ($res[0]['course_status'] != null && $res[0]['course_status'] != 'edit') : ?>
-                                <?= form_open('result/change-course', ['id' => 'change_course']) ?>
-                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
-                                <button type="submit" class="btn btn-danger btn-lg m-2" id="changeCourse"><?= lang('app.edit') ?></button>
-                                </form>
-                            <?php else : ?>
-                                <?= form_open('print/edit-course', ['id' => 'gpa_form_course']) ?>
-                                <input type="hidden" name="gpa_id" value="<?= $gpa['id'] ?>">
-                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
-                                <button type="submit" class="btn btn-purple btn-lg mb-1" id="gpaCourse"><?= lang('app.muadalaHuu') ?></button>
-                                </form>
-                            <?php endif ?>
-                        <?php endif ?>
-                    </div>
-                    <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h2><b><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></b>
-                                    <?php if (session('role') == 'admin' || session('level') == 4) : ?>
-                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/course/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
-                                    <?php elseif ($res[0]['course_status'] == 'done') : ?>
-                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/course/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
-                                    <?php endif ?>
-                                </h2>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2><b><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></b></h2>
+                                    </div>
+                                    <div class="col-4">
+                                        <?php if ((session('role') == 'admin') && $gpa != null) : ?>
+                                            <?php if ($res[0]['course_status'] != null && $res[0]['course_status'] != 'edit') : ?>
+                                                <?= form_open('result/change-course', ['id' => 'change_course']) ?>
+                                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
+                                                <button type="submit" class="btn btn-danger round float-right m-2" id="changeCourse"><?= lang('app.edit') ?></button>
+                                                </form>
+                                            <?php else : ?>
+                                                <?= form_open('print/edit-course', ['id' => 'gpa_form_course']) ?>
+                                                <input type="hidden" name="gpa_id" value="<?= $gpa['id'] ?>">
+                                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
+                                                <button type="submit" class="btn btn-purple round float-right mb-1" id="gpaCourse"><?= lang('app.muadalaHuu') ?></button>
+                                                </form>
+                                            <?php endif ?>
+                                        <?php endif ?>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-content collapse show">
                                 <div class="card-body card-dashboard">
@@ -151,33 +149,32 @@
                 </div>
                 <div class="tab-pane" id="fasl2" aria-labelledby="base-fasl2">
                     <div class="col-12">
-                        <?php if (session('role') == 'admin' && $gpa != null) : ?>
-                            <?php if ($res[0]['final_status'] == 'gpa' && $res[0]['final_status'] != 'marked' && $res[0]['final_status'] != null && $res[0]['final_status'] != 'edit_final') : ?>
-                                <?= form_open('result/change-final', ['id' => 'change_final']) ?>
-                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
-                                <button type="submit" class="btn btn-danger btn-lg m-2" id="changeFinal"><?= lang('app.edit') ?></button>
-                                </form>
-                            <?php else : ?>
-                                <?= form_open('print/edit-final', ['id' => 'gpa_form_final']) ?>
-                                <input type="hidden" name="gpa_id" value="<?= $gpa['id'] ?>">
-                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
-                                <button type="submit" class="btn btn-purple btn-lg mb-1" id="gpaFinal"><?= lang('app.muadalaHuu') ?></button>
-                                </form>
-                            <?php endif ?>
-                        <?php endif ?>
-                    </div>
-                    <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h2><b><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></b>
-                                    <?php if (session('role') == 'admin' || session('level') == 4) : ?>
-                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/final/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
-                                    <?php elseif ($res[0]['final_status'] == 'done') : ?>
-                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/final/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
-                                    <?php endif ?>
-                                </h2>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2><b><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></b></h2>
+                                    </div>
+                                    <div class="col-4">
+
+                                        <?php if (session('role') == 'admin' && $gpa != null) : ?>
+                                            <?php if ($res[0]['final_status'] == 'gpa' && $res[0]['final_status'] != 'marked' && $res[0]['final_status'] != null && $res[0]['final_status'] != 'edit_final') : ?>
+                                                <?= form_open('result/change-final', ['id' => 'change_final']) ?>
+                                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
+                                                <button type="submit" class="btn btn-danger round float-right m-2" id="changeFinal"><?= lang('app.edit') ?></button>
+                                                </form>
+                                            <?php else : ?>
+                                                <?= form_open('print/edit-final', ['id' => 'gpa_form_final']) ?>
+                                                <input type="hidden" name="gpa_id" value="<?= $gpa['id'] ?>">
+                                                <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                                <input type="hidden" name="course_id" value="<?= $gpa['course_id'] ?>">
+                                                <button type="submit" class="btn btn-purple round float-right mb-1" id="gpaFinal"><?= lang('app.muadalaHuu') ?></button>
+                                                </form>
+                                            <?php endif ?>
+                                        <?php endif ?>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-content collapse show">
                                 <div class="card-body card-dashboard">
@@ -297,9 +294,9 @@
                             <div class="card-header">
                                 <h2><b><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></b>
                                     <?php if (session('role') == 'admin' || session('level') == 4) : ?>
-                                        <!-- <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/all/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a> -->
+                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('gpa/kashf/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
                                     <?php elseif ($res[0]['final_status'] == 'done') : ?>
-                                        <!-- <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('print/kashf-darajat/all/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a> -->
+                                        <a class="btn btn-warning box-shadow-1 round pull-right" href="<?= base_url('gpa/kashf/' . $user['id'] . '/' . $class['id']) ?>" target="_blank"><?= lang('app.kashfuDarajat') ?></a>
                                     <?php endif ?>
                                 </h2>
                             </div>

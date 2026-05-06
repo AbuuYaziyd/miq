@@ -125,6 +125,7 @@ return [
     'newStudent' => 'Mwanafunzi Mpya',
     'addNewStudent' => 'Ongeza Mwanafunzi Mpya',
     'all' => 'Watu Wote',
+    'academicProgress' => 'Kashfu Darajati',
 
     // Announcement
     'announcement' => 'Tangazo',

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Gpa;
 use App\Models\Setting;
 use App\Models\Website;
 
@@ -43,6 +44,17 @@ class Home extends BaseController
 
     function test()
     {
+        $gpa = new Gpa();
+        $gpas = $gpa->findAll();
+        foreach ($gpas as $gp) {
+            $data = [
+                'gpa' => $gp['course_gpa'] + $gp['final_gpa']
+            ];
+            // $gpa->update($gp['id'], $data);
+        }
+        // dd($data);
+
+
         dd('test');
     }
 }

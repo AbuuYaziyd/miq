@@ -125,6 +125,7 @@ return [
     'newStudent' => 'طالب جديد',
     'addNewStudent' => 'إضافة طالب جديد',
     'all' => 'جميع الناس',
+    'academicProgress' => 'سجل الأكاديمي',
 
     // Announcement
     'announcement' => 'إعلان',

@@ -1,30 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
-<div class="row">
-</div>
-<?php if (count($gpas) > 0) : ?>
-    <div class="row">
-        <?php foreach ($gpas as $dt) : ?>
-            <div class="col-md-<?= count($gpas) == 2 ? 6 : (count($gpas) == 4 ? 6 : 4) ?>">
-                <a href="<?= base_url('result/view/' . $stu['id'] . '/' . $dt['course_id']) ?>">
-                    <div class="card pull-up">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="media d-flex">
-                                    <div class="media-body text-left">
-                                        <h3 class="danger"><?= $gpa->class($dt['course_id'])['name'] ?></h3>
-                                    </div>
-                                    <div>
-                                        <i class="icon-bulb danger font-large-2 float-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        <?php endforeach ?>
-    </div>
+
+<?php if (count($gp) > 0) : ?>
     <?php if ($res[0]['course_status'] != 'gpa') : ?>
         <div class="row">
             <div class="col-12 mb-2">
@@ -49,4 +26,43 @@
         </div>
     </div>
 <?php endif ?>
+
+<div class="row">
+    <?php foreach ($school as $sc) : ?>
+        <div class="col-md-4">
+            <div class="card" data-height="">
+                <div class="card-header">
+                    <h3>
+                        <b> <?= lang('app.results') ?>: <?= $sc['name'] ?></b>
+                        <a data-action="collapse"><i class="ft-plus pull-right"></i></a>
+                    </h3>
+                </div>
+                <div class="card-content collapse">
+                    <div class="card-body text-center">
+                        <?php foreach ($sch->course($sc['id']) as $key => $cl) : ?>
+                            <?php if ($sch->checkResults($stu['id'], $cl['id'])) : ?>
+                                <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $cl['id']) ?>" class="btn btn-primary btn-block round" target="_blank"><i class="ft ft-eye"></i> | <?= $cl['name'] ?></a>
+                                <?php $ok = true ?>
+                            <?php else : ?>
+                                <span class="btn btn-secondary btn-block round"><?= $cl['name'] ?></span>
+                                <?php $ok = false ?>
+                            <?php endif ?>
+                        <?php endforeach ?>
+                    </div>
+                    <div class="card-footer text-center">
+                        <?php if ($ok) : ?>
+                            <?php if (session('role') != 'admin') : ?>
+                                <a href="<?= base_url('gpa/all/' . $stu['id']) ?>" target="_blank" class="btn btn-teal btn-lg btn-block round"><i class="ft ft-download"></i> | <?= lang('app.academicProgress') ?></a>
+                            <?php else : ?>
+                                <a href="<?= base_url('gpa/progress/' . $stu['id']) ?>" target="_blank" class="btn btn-teal btn-lg btn-block round"><i class="ft ft-download"></i> | <?= lang('app.academicProgress') ?></a>
+                            <?php endif ?>
+                        <?php else : ?>
+                            <span class="btn btn-outline-teal btn-lg btn-block round"><?= lang('app.academicProgress') ?></span>
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach ?>
+</div>
 <?= $this->endSection() ?>

@@ -362,7 +362,10 @@ class ResultController extends BaseController
             // dd($p, $exam);
 
             foreach ($p as $key => $d) {
-                $dt = ['position' => $key + 1];
+                $dt = [
+                    'position' => $key + 1,
+                    'gpa' => $d['course_gpa'] + $d['final_gpa']
+                ];
 
                 $gpa->update($d['id'], $dt);
             }
@@ -431,21 +434,41 @@ class ResultController extends BaseController
     public function student($id)
     {
         $user = new User();
-        $crs = new Course();
-        $gpa = new Gpa();
+        $cl = new Course();
+        $gp = new Gpa();
         $res = new Result();
         $sub = new Subject();
+        $sch = new School();
 
         $stu = $user->find($id);
-        $class = $crs->find($stu['level']);
+        $class = $cl->find($stu['level']);
 
         $data['title'] = lang('app.results');
         $data['stu'] = $stu;
         $data['class'] = $class;
+        $data['sch'] = $sch;
+        $data['school'] = $sch->findAll();
         $data['sub'] = $sub->where('course_id', $stu['level'])->findAll();
-        $data['gpas'] = $gpa->where('student_id', $id)->orderBy('course_id', 'asc')->select(['year_id', 'course_id'])->distinct()->findAll();
+        $data['gp'] = $gp->where('student_id', $id)->orderBy('course_id', 'asc')->select('course_id')->distinct()->findAll();
         $data['res'] = $res->where(['student_id' => $id, 'course_id' => $stu['level']])->findAll();
-        $data['gpa'] = $gpa;
+        $data['p'] = $gp;
+
+        // $user = new User();
+        // $crs = new Course();
+        // $gpa = new Gpa();
+        // $res = new Result();
+        // $sub = new Subject();
+
+        // $stu = $user->find($id);
+        // $class = $crs->find($stu['level']);
+
+        // $data['title'] = lang('app.results');
+        // $data['stu'] = $stu;
+        // $data['class'] = $class;
+        // $data['sub'] = $sub->where('course_id', $stu['level'])->findAll();
+        // $data['gpas'] = $gpa->where('student_id', $id)->orderBy('course_id', 'asc')->select(['year_id', 'course_id'])->distinct()->findAll();
+        // $data['res'] = $res->where(['student_id' => $id, 'course_id' => $stu['level']])->findAll();
+        // $data['gpa'] = $gpa;
         // dd($data);
 
         return view('result/student', $data);
@@ -581,7 +604,7 @@ class ResultController extends BaseController
     //     $acd = new Academy();
 
     //     $year = $this->request->getVar('year');
-    //     $class = $this->request->getVar('class_id');
+    //     $class = $this->request->getVar('course_id');
 
     //     $acdmc = $acd->find($class);
     //     $data['title'] = lang('app.results') . ' - ' . $acdmc['name'];

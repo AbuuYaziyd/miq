@@ -73,4 +73,13 @@ class School extends Model
         $crs = new Course();
         return $crs->where('school_id', $id)->findAll();
     }
+
+    function checkResults($id, $course_id)
+    {
+        $gpa = new Gpa();
+        $check = $gpa->where(['course_id' => $course_id, 'student_id' => $id])->findAll();
+        // dd($check);
+
+        return $check;
+    }
 }

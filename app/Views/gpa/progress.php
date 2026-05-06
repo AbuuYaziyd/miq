@@ -1,0 +1,240 @@
+<?php
+$muadala = 0;
+$masomo = 0;
+$alama = 0;
+?>
+<!DOCTYPE html>
+<html class="loading" lang="<?= service('request')->getLocale() ?>" data-textdirection="<?= service('request')->getLocale() != 'ar' ? 'ltr' : 'rtl' ?>">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?= $title ?> | <?= lang('app.appName') ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            padding: 5px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #806240;
+            /* Dark Green Border */
+            padding-bottom: 10px;
+        }
+
+        .institution-details {
+            text-align: right;
+        }
+
+        .logo-box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #806240;
+        }
+
+        .student-info {
+            margin-bottom: 5px;
+            background-color: #f9efe5;
+            /* Light Green Tint */
+            padding: 15px;
+            border-right: 5px solid #806240;
+            border-left: 5px solid #806240;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 2px;
+            text-align: center;
+        }
+
+        /* Dark Green Header Styling */
+        th {
+            background-color: #806240;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .fail {
+            background-color: #ffebee;
+            color: #c62828;
+            font-weight: bold;
+        }
+
+        .summary-section {
+            margin-top: 30px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .signature-line {
+            margin-top: 10px;
+            border-top: 1px solid #333;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <?php foreach ($gpas as $gpkey => $gp) : ?>
+        <?php $student = $gpa->user($gp['student_id']) ?>
+        <?php $class = $gpa->class($gp['course_id']) ?>
+        <?php $results = $gpa->results($student['id'], $gp['course_id']) ?>
+        <div id="printArea" style="direction: <?= service('request')->getLocale() != 'ar' ? 'ltr' : 'rtl' ?>; width: 100%;">
+            <div class="header-container">
+                <div class="institution-details">
+                    <h3 style="color: #806240;">مركز ابن القيم
+                        <br>
+                        <span>ص. ب. 0000,</span>
+                        <span>كغوما - تنزانيا</span>
+                    </h3>
+                </div>
+                <div class="logo-box">
+                    <img alt="apple-touch-icon" src="<?= base_url('app-assets/images/logo/logo.png') ?>" height="120px">
+                </div>
+                <div class="contact-info" dir="ltr">
+                    <h3 style="color: #806240;">Markaz Ibn Qayyim
+                        <br>
+                        <span>Po. Box 0000,</span>
+                        <span>Kigoma - Tanzania</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="student-info" style="text-align: center;">
+                <strong>
+                    <?php if (session('lang') != 'ar') : ?>
+                        <?= $student['name'] ?> <?= $student['mname'] ?> <?= $student['lname'] ?>
+                    <?php else : ?>
+                        <?= $student['name_ar'] ?> <?= $student['mname_ar'] ?> <?= $student['lname_ar'] ?>
+                    <?php endif ?> |
+                    <span style="color: #806240; text-align: right">
+                        كشف الدرجات:
+                        <?php if (session('lang') != 'ar') : ?>
+                            <?= $class['name'] ?>
+                        <?php else : ?>
+                            <?= $class['name_ar'] ?>
+                        <?php endif ?>
+                    </span>
+                </strong>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>المقرر</th>
+                        <th>النتائج</th>
+                        <th>الدرجة</th>
+                        <th>التقدير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($results as $key => $rs) : ?>
+                        <?php $mark = $rs['course'] + $rs['final'] ?>
+                        <?php $grade = $gpa->grade($mark) ?>
+                        <tr>
+                            <td><?= $gpa->subject($rs['subject_id'])['name'] ?></td>
+                            <td><?= $mark ?></td>
+                            <td><?= $grade['ramz'] ?></td>
+                            <td><?= $grade['name'] ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+
+            <div class="summary-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الوضع العام</th>
+                            <th>مقررات</th>
+                            <th>جملة النتائج</th>
+                            <th>المعدل</th>
+                            <th>التقدير العام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: 	#E5E4E2;">فصلي</td>
+                            <td><?= $gp['subjects'] ?></td>
+                            <td><?= round($gp['marks']) ?></td>
+                            <td><?= round($gp['gpa']) ?></td>
+                            <td><?= $gpa->grade(round($gp['gpa']))['name'] ?></td>
+                        </tr>
+                        <?php
+                        $masomo = $masomo + $gp['subjects'];
+                        $alama = $alama + round($gp['marks']);
+                        $muadala = $muadala + round($gp['gpa']);
+                        ?>
+                        <tr>
+                            <td style="background: 	#E5E4E2;">تراكمي</td>
+                            <td><?= $masomo ?></td>
+                            <td><?= $alama ?></td>
+                            <td><?= ($muadala / ($gpkey + 1)) ?></td>
+                            <td><?= $gpa->grade(round($muadala / ($gpkey + 1)))['name'] ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <div>
+                    <p><?= $mudir['extra'] ?></p>
+                    <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
+                    <div class="signature-line"></div>
+                    <p><?= $mudir['value'] ?><br><?= date('d/m/Y') ?></p>
+                </div>
+                <div>
+                    <a href="<?= base_url('print/search/' . $gp['link']) ?>">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?= urlencode(base_url('print/search/' . $gp['link'])) ?>" title="<?= $student['username'] ?>" class="float-right m-3" />
+                    </a>
+
+                </div>
+                <div>
+                    <p><?= $taalim['extra'] ?></p>
+                    <img src="<?= base_url($taalim['info']) ?>" height="50px" alt="sign" />
+                    <div class="signature-line"></div>
+                    <p><?= $taalim['value'] ?><br><?= date('d/m/Y') ?></p>
+                </div>
+            </div>
+        </div>
+    <?php endforeach ?>
+</body>
+<script>
+    window.print()
+</script>
+
+</html>
