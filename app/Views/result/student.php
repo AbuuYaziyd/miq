@@ -33,7 +33,13 @@
             <div class="card" data-height="">
                 <div class="card-header">
                     <h3>
-                        <b> <?= lang('app.results') ?>: <?= $sc['name'] ?></b>
+                        <b>
+                            <?= lang('app.results') ?>:
+                            <?php if (session('lang') != 'ar') : ?>
+                                <?= $sc['name'] ?>
+                                <?php else : ?><?= $sc['name_ar'] ?>
+                            <?php endif ?>
+                        </b>
                         <a data-action="collapse"><i class="ft-plus pull-right"></i></a>
                     </h3>
                 </div>
@@ -44,7 +50,13 @@
                                 <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $cl['id']) ?>" class="btn btn-primary btn-block round" target="_blank"><i class="ft ft-eye"></i> | <?= $cl['name'] ?></a>
                                 <?php $ok = true ?>
                             <?php else : ?>
-                                <span class="btn btn-secondary btn-block round"><?= $cl['name'] ?></span>
+                                <span class="btn btn-secondary btn-block round">
+                                    <?php if (session('lang') != 'ar') : ?>
+                                        <?= $cl['name'] ?>
+                                    <?php else : ?>
+                                        <?= $cl['name_ar'] ?>
+                                    <?php endif ?>
+                                </span>
                                 <?php $ok = false ?>
                             <?php endif ?>
                         <?php endforeach ?>
