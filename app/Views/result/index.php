@@ -49,7 +49,13 @@
                                     <tbody>
                                         <?php foreach ($crs->result($y['year_id']) as $cl) : ?>
                                             <tr>
-                                                <td><?= $crs->course($cl['course_id'])['name'] ?></td>
+                                                <td>
+                                                    <?php if (session('lang') != 'ar') : ?>
+                                                        <?= $crs->course($cl['course_id'])['name'] ?>
+                                                    <?php else : ?>
+                                                        <?= $crs->course($cl['course_id'])['name_ar'] ?>
+                                                    <?php endif ?>
+                                                </td>
                                                 <td>
                                                     <?php if ($crs->checkGPA($cl['course_id'], $y['year_id'], 'course') >= 1) : ?>
                                                         <a href="<?= base_url('result/course/show/' . $cl['course_id'] . '/' . $y['year_id']) ?>" class="btn btn-primary round"><?= lang('app.view') ?></a>

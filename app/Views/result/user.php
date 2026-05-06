@@ -250,9 +250,9 @@
                                             <thead>
                                                 <th><?= lang('app.fasliy') ?></th>
                                                 <td><?= $msr['subjects'] ?></td>
-                                                <td><?= intval($msr['marks_final']) ?></td>
-                                                <td><?= $msr['gpa_final'] ?></td>
-                                                <td><span style="color:<?= $r->masar(intval($msr['gpa_final'] * 2))['color'] ?>"><b><?= $r->masar(intval($msr['gpa_final'] * 2))['name'] ?></b></span></td>
+                                                <td><?= intval($msr['final_marks']) ?></td>
+                                                <td><?= $msr['final_gpa'] ?></td>
+                                                <td><span style="color:<?= $r->masar(intval($msr['final_gpa'] * 2))['color'] ?>"><b><?= $r->masar(intval($msr['final_gpa'] * 2))['name'] ?></b></span></td>
                                             </thead>
                                             <thead>
                                                 <th><?= lang('app.tarakum') ?></th>
@@ -280,7 +280,7 @@
                                                 <?php if ($mark['final_status'] != 'gpa') : ?>
                                                     <td colspan="3"><b><?= lang('app.soon') ?></b></td>
                                                 <?php else : ?>
-                                                    <td colspan="3"><b><?= $gpa['position_final'] ?></b></td>
+                                                    <td colspan="3"><b><?= $gpa['final_position'] ?></b></td>
                                                 <?php endif ?>
                                                 <td colspan="3"><b><?= $gpa['number_of_students'] ?? $c->stuCount($class['id']) ?></b></td>
                                             </thead>
