@@ -44,6 +44,7 @@
                                             <th><?= lang('app.course') ?></th>
                                             <th><?= lang('app.fasli1') ?></th>
                                             <th><?= lang('app.fasli2') ?></th>
+                                            <th><?= lang('app.year') ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -68,6 +69,13 @@
                                                         <a href="<?= base_url('result/final/show/' . $cl['course_id'] . '/' . $y['year_id']) ?>" class="btn btn-info round"><?= lang('app.view') ?></a>
                                                     <?php else : ?>
                                                         <span class="btn btn-outline-info round"><?= lang('app.view') ?></span>
+                                                    <?php endif ?>
+                                                </td>
+                                                <td>
+                                                    <?php if ($crs->checkGPA($cl['course_id'], $y['year_id'], 'final') >= 1) : ?>
+                                                        <a href="<?= base_url('result/all/' . $cl['course_id'] . '/' . $y['year_id']) ?>" class="btn btn-pink round"><?= lang('app.view') ?></a>
+                                                    <?php else : ?>
+                                                        <span class="btn btn-outline-pink round"><?= lang('app.view') ?></span>
                                                     <?php endif ?>
                                                 </td>
                                             </tr>

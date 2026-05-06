@@ -130,9 +130,9 @@
                                         <?php $student = $gpa->user($dt['student_id']) ?>
                                         <?php $this_gpa = $gpa->gpa($dt['student_id'], $dt['course_id']) ?>
                                         <tr>
-                                            <td><?= $dt[$exam . '_position'] ?></td>
-                                            <td><?= $dt[$exam . '_gpa'] ?></td>
-                                            <td><?= $dt[$exam . '_marks'] ?></td>
+                                            <td><?= $dt['position'] ?></td>
+                                            <td><?= $dt['gpa'] ?></td>
+                                            <td><?= $dt['marks'] ?></td>
                                             <td>
                                                 <?php if (session('lang') != 'ar') : ?>
                                                     <?= $student['name'] ?> <?= $student['name'] ?> <?= $student['lname'] ?>

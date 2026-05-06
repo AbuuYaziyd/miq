@@ -29,7 +29,7 @@
                 <div class="card-header">
                     <h2>
                         <b><?= lang('app.results') ?></b>
-                        <a class="btn btn-red box-shadow-1 round pull-right" href="<?= base_url('gpa/class/' . $exam . '/' . $course['id'] . '/' . $year['id']) ?>" target="_blank"><?= lang('app.print') ?></a>
+                        <a class="btn btn-red box-shadow-1 round pull-right" href="<?= base_url('gpa/fasl/' . $course['id'] . '/' . $year['id']) ?>" target="_blank"><?= lang('app.print') ?></a>
                     </h2>
                 </div>
                 <div class="card-content collapse show">
@@ -58,8 +58,8 @@
                                                 <?= $student['name_ar'] ?> <?= $student['mname_ar'] ?> <?= $student['lname_ar'] ?>
                                             <?php endif ?>
                                         </td>
-                                        <td><?= $dt[$exam . '_marks'] ?></td>
-                                        <td><?= $dt[$exam . '_gpa'] ?></td>
+                                        <td><?= $dt['marks'] ?></td>
+                                        <td><?= $dt['gpa'] ?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

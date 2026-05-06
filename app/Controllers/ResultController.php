@@ -388,7 +388,8 @@ class ResultController extends BaseController
         $course = $crs->find($id);
         // dd($course);
 
-        $data['title'] = lang('app.results') . ' - ' . $course['name'];
+        $cors_name = session('lang') != 'ar' ? $course['name'] : $course['name_ar'];
+        $data['title'] = lang('app.results') . ' - ' . $cors_name;
         $data['gpa'] = $gpa;
         $data['course'] = $course;
         $data['exam'] = $exam;
@@ -429,6 +430,30 @@ class ResultController extends BaseController
         // dd($data);
 
         return view('result/view', $data);
+    }
+
+    public function all($id, $year_id)
+    {
+        helper('form');
+
+        $gpa = new Gpa();
+        $sch = new School();
+        $crs = new Course();
+        $yr = new Year();
+
+        $course = $crs->find($id);
+        // dd($course);
+
+        $cors_name = session('lang') != 'ar' ? $course['name'] : $course['name_ar']; 
+        $data['title'] = lang('app.results') . ' - ' . $cors_name;
+        $data['gpa'] = $gpa;
+        $data['course'] = $course;
+        $data['year'] = $yr->find($year_id);
+        $data['school'] = $sch->find($course['school_id']);
+        $data['class_gpa'] = $gpa->where(['course_id' => $id, 'year_id' => $year_id, 'gpa!=' => null])->orderBy('marks', 'DESC')->findAll();
+        // dd($data);
+
+        return view('result/all', $data);
     }
 
     public function student($id)

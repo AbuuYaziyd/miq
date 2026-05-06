@@ -296,6 +296,7 @@ $routes->group('result', function ($routes) {
     $routes->get('(:segment)/position/(:num)', 'ResultController::position/$1/$2', ['filter' => 'teacher']);
     $routes->get('(:segment)/show/(:num)/(:num)', 'ResultController::show/$1/$2/$3', ['filter' => 'teacher']);
     $routes->get('view/(:segment)/(:num)/(:num)', 'ResultController::view/$1/$2/$3', ['filter' => 'teacher']);
+    $routes->get('all/(:num)/(:num)', 'ResultController::all/$1/$2', ['filter' => 'teacher']);
     $routes->get('student/(:num)', 'ResultController::student/$1', ['filter' => 'auth']);
     $routes->get('user/(:num)/(:num)', 'ResultController::user/$1/$2', ['filter' => 'auth']);
     $routes->post('change', 'ResultController::change', ['filter' => 'auth']);
@@ -318,5 +319,5 @@ $routes->group('gpa', function ($routes) {
     $routes->get('view/(:num)/(:num)', 'GpaController::view/$1/$2', ['filter' => 'teacher']);
     $routes->get('progress/(:num)', 'GpaController::progress/$1', ['filter' => 'auth']);
     $routes->get('search/(:any)', 'GpaController::search/$1', ['filter' => 'auth']);
-    // $routes->get('position/(:num)', 'GpaController::position/$1', ['filter' => 'admin']);
+    $routes->get('fasl/(:num)/(:num)', 'GpaController::fasl/$1/$2', ['filter' => 'admin']);
 });
