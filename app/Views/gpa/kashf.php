@@ -187,16 +187,24 @@ $alama = 0;
                     <tr>
                         <th>مقررات</th>
                         <th>جملة النتائج</th>
+                        <th><?= lang('app.hisposition') ?></th>
+                        <th><?= lang('app.studentCount') ?></th>
                         <th>المعدل</th>
                         <th>التقدير العام</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><?= $gpas['subjects'] ?></td>
-                        <td><?= round($gpas['marks']) ?></td>
-                        <td><?= round($gpas['gpa']) ?></td>
-                        <td><?= $gpa->grade(round($gpas['gpa']))['name'] ?></td>
+                        <td><b><?= $gpas['subjects'] ?></b></td>
+                        <td><b><?= round($gpas['marks']) ?></b></td>
+                        <?php if ($rs['final_status'] != 'gpa') : ?>
+                            <td><b><?= lang('app.soon') ?></b></td>
+                        <?php else : ?>
+                            <td><b><?= $gpas['final_position'] ?></b></td>
+                        <?php endif ?>
+                        <td><b><?= $gpas['number_of_students'] ?? $c->stuCount($class['id']) ?></b></td>
+                        <td><b><?= round($gpas['gpa']) ?></b></td>
+                        <td><b><?= $gpa->grade(round($gpas['gpa']))['name'] ?></td>
                     </tr>
                 </tbody>
             </table>

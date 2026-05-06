@@ -30,6 +30,7 @@ class Gpa extends Model
         'final_position',
         'position',
         'link',
+        'id',
     ];
 
     protected bool $allowEmptyInserts = false;
