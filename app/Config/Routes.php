@@ -317,6 +317,6 @@ $routes->group('gpa', function ($routes) {
     // $routes->get('make/(:num)', 'GpaController::make/$1', ['filter' => 'admin']);
     $routes->get('view/(:num)/(:num)', 'GpaController::view/$1/$2', ['filter' => 'teacher']);
     $routes->get('progress/(:num)', 'GpaController::progress/$1', ['filter' => 'auth']);
-    // $routes->get('search/(:any)', 'GpaController::search/$1', ['filter' => 'auth']);
+    $routes->get('search/(:any)', 'GpaController::search/$1', ['filter' => 'auth']);
     // $routes->get('position/(:num)', 'GpaController::position/$1', ['filter' => 'admin']);
 });

@@ -169,26 +169,19 @@ class GpaController extends BaseController
         return view('gpa/view', $data);
     }
 
-    // public function search($link)
-    // {
-    //     // dd($id);
-    //     $gpa = new Gpa();
-    //     $set = new Setting();
-    //     $res = new Result();
-    //     $usr = new User();
-    //     $hjr = new Hijri();
+    public function search($link)
+    {
+        $gpa = new Gpa();
+        $set = new Setting();
 
-    //     $result = $gpa->where('link', $link)->first();
-    //     $id = $result['student_id'];
-    //     $data['title'] = lang('app.results');
-    //     $data['user'] = $usr->find($id);
-    //     $data['gpa'] = $gpa->where('student_id', $id)->orderBy('class_id', 'asc')->findAll();
-    //     $data['mudir'] = $set->where('name', 'mudir')->first();
-    //     $data['g'] = $gpa;
-    //     $data['res'] = $res;
-    //     $data['hjr'] = $hjr;
-    //     // dd($data);
+        $find = $gpa->where('link', $link)->first();
+        $data['title'] = lang('app.academicProgress');
+        $data['gpa'] = $gpa;
+        $data['mudir'] = $set->where('name', 'mudir')->first();
+        $data['taalim'] = $set->where('name', 'taalim')->first();
+        $data['gpas'] =  $gpa->where('student_id', $find['student_id'])->orderBy('course_id', 'asc')->findAll();
+        // dd($data);
 
-    //     return view('gpa/all', $data);
-    // }
+        return view('gpa/progress', $data);
+    }
 }

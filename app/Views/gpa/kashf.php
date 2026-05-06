@@ -217,8 +217,8 @@ $alama = 0;
                 <p><?= $mudir['value'] ?><br><?= date('d/m/Y') ?></p>
             </div>
             <div>
-                <a href="<?= base_url('print/search/' . $gpas['link']) ?>">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?= urlencode(base_url('print/search/' . $gpas['link'])) ?>" title="<?= $student['username'] ?>" class="float-right m-3" />
+                <a href="<?= base_url('gpa/search/' . $gpas['link']) ?>">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?= urlencode(base_url('gpa/search/' . $gpas['link'])) ?>" title="<?= $student['username'] ?>" class="float-right m-3" />
                 </a>
 
             </div>
