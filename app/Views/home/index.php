@@ -13,7 +13,7 @@
                                 <a href="<?= base_url() ?>"><img src="<?= base_url('app-assets/images/logo/logo.png') ?>" alt="logo" height="180px"></a>
                             </div>
                         </div>
-                        <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span><?= getenv('APP_NAME') ?></span>
+                        <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span><?= lang('app.appName') ?></span>
                         </h6>
                     </div>
                     <div class="card-body text-center">
