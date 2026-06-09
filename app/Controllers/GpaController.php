@@ -135,7 +135,7 @@ class GpaController extends BaseController
         $class = $cl->find($id);
         $results = $res->where(['course_id' => $id, 'year_id' => $yr])->findAll();
         $users = $user->where(['role' => 'student', 'level' => $id])->findAll();
-        $search = $gpa->where(['course_id' => $id, 'year_id' => $yr])->orderBy('total', 'DESC')->findAll();
+        $search = $gpa->where(['course_id' => $id, 'year_id' => $yr])->orderBy('marks', 'DESC')->findAll();
 
         // dd(count($search));
         // dd($results);

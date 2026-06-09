@@ -17,7 +17,7 @@
                 <div class="col-auto m-2 text-center">
                     <a href="<?= base_url('gpa/view/' . $class['id'] . '/' . $yr['id']) ?>" class="btn btn-lg btn-teal  m-1"><?= lang('app.studentsResults') ?></a>
                     <a class="btn btn-danger btn-lg m-1" href="<?= base_url('student/upgrade/' . $class['id']) ?>"><?= lang('app.editStudents') ?></a>
-                    <a href="<?= base_url('subject/class/' . $class['id']) ?>" class="btn btn-warning btn-lg m-1"><?= lang('app.editSubjects') ?></a>
+                    <!-- <a href="<?= base_url('subject/class/' . $class['id']) ?>" class="btn btn-warning btn-lg m-1"><?= lang('app.editSubjects') ?></a> -->
                 </div>
             </div>
         </div>
