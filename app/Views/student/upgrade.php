@@ -28,12 +28,24 @@
                                             <td><?= $stuKey + 1 ?></td>
                                             <input type="hidden" name="id[]" value="<?= $data['id'] ?>">
                                             <td><a href="<?= base_url('students/info/' . $data['id']) ?>" target="_blank"><span class="btn btn-outline-info btn-sm round"><?= $data['username'] ?></span></a></td>
-                                            <td><?= ($data['name_ar'] ?? $data['name']) ?></td>
+                                            <td>
+                                                <?php if (session('lang') != 'ar') : ?>
+                                                    <?= $data['name'] ?> <?= $data['mname'] ?> <?= $data['lname'] ?>
+                                                <?php else : ?>
+                                                    <?= $data['name_ar'] ?> <?= $data['mname_ar'] ?> <?= $data['lname_ar'] ?>
+                                                <?php endif ?>
+                                            </td>
                                             <td>
                                                 <select class="custom-select form-control" name="level<?= $stuKey ?>">
                                                     <?php foreach ($drs as $key => $dt) : ?>
                                                         <?php if (count($drs) == $key + 1) : ?>
-                                                            <option value="<?= $dt['id'] ?>" <?= $dt['id'] == $next ? 'selected' : '' ?>><?= $dt['name'] ?></option>
+                                                            <option value="<?= $dt['id'] ?>" <?= $dt['id'] == $next ? 'selected' : '' ?>>
+                                                                <?php if (session('lang') != 'ar') : ?>
+                                                                    <?= $dt['name'] ?>
+                                                                <?php else : ?>
+                                                                    <?= $dt['name_ar'] ?>
+                                                                <?php endif ?>
+                                                            </option>
                                                         <?php endif ?>
                                                     <?php endforeach ?>
                                                     <option value="graduate"><?= lang('app.graduates') ?></option>

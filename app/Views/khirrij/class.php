@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 <?php if ($new) : ?>
     <div class="row">
@@ -26,7 +26,7 @@
                                             <?php foreach ($new as $key => $data) : ?>
                                                 <tr>
                                                     <td><?= $key + 1 ?></td>
-                                                    <td><?= $data['malaf'] ?></td>
+                                                    <td><?= $data['username'] ?></td>
                                                     <td><?= ($data['name_ar'] ?? $data['lname']) ?></td>
                                                     <td><input type="checkbox" name="stuId[]" value="<?= $data['id'] ?>"></td>
                                                 </tr>

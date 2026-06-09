@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/app') ?>
 
 <?= $this->section('content') ?>
 <div class="row">
@@ -21,7 +21,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><a href="<?= base_url('user/profile/' . $user['id']) ?>" class="btn btn-outline-info round btn-sm"><?= $user['malaf'] ?></a></td>
+                                            <td><a href="<?= base_url('user/profile/' . $user['id']) ?>" class="btn btn-outline-info round btn-sm"><?= $user['username'] ?></a></td>
                                             <td><?= $user['name_ar'] ?? $user['name'] . ' ' . $user['lname'] ?></td>
                                             <td><?= $user['sex'] != 'M' ? lang('app.female') : lang('app.male') ?></td>
                                             <?php if ($user['dob'] != null) : ?>

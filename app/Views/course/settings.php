@@ -6,7 +6,7 @@
             <div class="card-header bg-hexagons border-top-3 border-top-primary" style="justify-content: center; display:flex">
                 <div class="card-body pt-0">
                     <h4>
-                        <span class="h1 "><b><?= env('APP_NAME') ?></b></span><br>
+                        <span class="h1 "><b><?= lang('app.appName') ?></b></span><br>
                         <?= lang('app.school') ?>: <b><?= $sch['name'] ?></b><br>
                         <?= lang('app.className') ?>: <b><?= $class['name'] ?></b><br><br>
                         <b><?= lang('app.advancedSettings') ?></b>

@@ -53,7 +53,16 @@ $period = $prd->findAll();
     <div class="col-md-4">
         <div class="card">
             <div class="card-header">
-                <h4><b><?= lang('app.timetable') ?>: <?= $course['name'] ?></b></h4>
+                <h4>
+                    <b>
+                        <?= lang('app.timetable') ?>:
+                        <?php if (session('lang') != 'ar') : ?>
+                            <?= $course['name'] ?>
+                        <?php else : ?>
+                            <?= $course['name_ar'] ?>
+                        <?php endif ?>
+                    </b>
+                </h4>
             </div>
             <div class="card-content collapse show">
                 <div class="card-body p-0">
@@ -104,7 +113,16 @@ $period = $prd->findAll();
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h3><b><?= lang('app.allSubjects') ?>: <?= $course['name'] ?></b></h3>
+                <h3>
+                    <b>
+                        <?= lang('app.allSubjects') ?>:
+                        <?php if (session('lang') != 'ar') : ?>
+                            <?= $course['name'] ?>
+                        <?php else : ?>
+                            <?= $course['name_ar'] ?>
+                        <?php endif ?>
+                    </b>
+                </h3>
             </div>
             <div class="card-content collapse show">
                 <div class="card-body p-0">

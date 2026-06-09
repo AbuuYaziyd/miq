@@ -17,6 +17,7 @@ class Khirrij extends Model
     protected $allowedFields    = [
         'student_id',
         'year_id',
+        'username',
         'certificate',
         'certificate_no',
         'status',
@@ -59,5 +60,4 @@ class Khirrij extends Model
         $y = new Year();
         return $y->find($id);
     }
-
 }

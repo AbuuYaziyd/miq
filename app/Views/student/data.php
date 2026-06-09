@@ -76,7 +76,13 @@
                             <button type="button" class="btn btn-dark round btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= lang('app.choose') ?></button>
                             <div class="dropdown-menu">
                                 <?php foreach ($class as $dt) : ?>
-                                    <a class="dropdown-item" href="<?= base_url('student/assign/' . $st['id'] . '/' . $dt['id']) ?>"><?= $dt['name'] ?> - <?= $c->school($dt['school_id'])['name'] ?></a>
+                                    <a class="dropdown-item" href="<?= base_url('student/assign/' . $st['id'] . '/' . $dt['id']) ?>">
+                                        <?php if (session('lang') != 'ar') : ?>
+                                            <?= $dt['name'] ?> - <?= $c->school($dt['school_id'])['name'] ?>
+                                        <?php else : ?>
+                                            <?= $dt['name_ar'] ?> - <?= $c->school($dt['school_id'])['name_ar'] ?>
+                                        <?php endif ?>
+                                    </a>
                                 <?php endforeach ?>
                             </div>
                         </div>

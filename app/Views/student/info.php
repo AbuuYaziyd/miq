@@ -41,12 +41,27 @@ if (session('lang') != 'ar') {
                             <table class="table table-striped text-center">
                                 <tbody>
                                     <tr>
-                                        <td><?= lang('app.course') ?>: <b><?= $school['name'] ?? 'N/A' ?></b></td>
+                                        <td><?= lang('app.course') ?>:
+                                            <b>
+                                                <?php if (session('lang') != 'ar') : ?>
+                                                    <?= $school['name'] ?>
+                                                <?php else : ?>
+                                                    <?= $school['name_ar'] ?>
+                                                <?php endif ?>
+                                            </b>
+                                        </td>
                                         <td><?= lang('app.age') ?>: <b><?= $age ?></b></td>
                                     </tr>
                                     <tr>
-                                        <td><?= lang('app.class') ?>: <b><?= $class['name'] ?? 'N/A' ?></b></td>
-                                        <td><?= lang('app.sex') ?>: <b><?= $stu['sex'] ?? 'N/A' ?></b></td>
+                                        <td><?= lang('app.class') ?>:
+                                            <b>
+                                                <?php if (session('lang') != 'ar') : ?>
+                                                    <?= $class['name'] ?>
+                                                <?php else : ?>
+                                                    <?= $class['name_ar'] ?>
+                                                <?php endif ?></b>
+                                        </td>
+                                        <td><?= lang('app.sex') ?>: <b><?= lang('app.' . $stu['sex']) ?? 'N/A' ?></b></td>
                                     </tr>
                                     <tr>
                                         <td><?= lang('app.username') ?>: <b><?= $stu['username'] ?></b></td>
@@ -81,10 +96,22 @@ if (session('lang') != 'ar') {
                                             <td><a href="<?= base_url('reset/' . $stu['id']) ?>" class="btn btn-danger btn-sm round" id="reset"><?= lang('app.passchange') ?></a></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-outline-info btn-sm round dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $class['name'] ?? 'N/A' ?></button>
+                                                    <button type="button" class="btn btn-outline-info btn-sm round dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <?php if (session('lang') != 'ar') : ?>
+                                                            <?= $class['name'] ?>
+                                                        <?php else : ?>
+                                                            <?= $class['name_ar'] ?>
+                                                        <?php endif ?>
+                                                    </button>
                                                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 42px, 0px);">
                                                         <?php foreach ($classes as $cl) : ?>
-                                                            <a class="dropdown-item" href="<?= base_url('student/class-change/' . $stu['id'] . '/' . $cl['id']) ?>"><?= $cl['name'] ?></a>
+                                                            <a class="dropdown-item" href="<?= base_url('student/class-change/' . $stu['id'] . '/' . $cl['id']) ?>">
+                                                                <?php if (session('lang') != 'ar') : ?>
+                                                                    <?= $cl['name'] ?>
+                                                                <?php else : ?>
+                                                                    <?= $cl['name_ar'] ?>
+                                                                <?php endif ?>
+                                                            </a>
                                                         <?php endforeach ?>
                                                         <a class="dropdown-item" href="<?= base_url('student/change-class/' . $stu['id'] . '/mafsul') ?>"><?= lang('app.mafsul') ?> - <?= lang('app.fee') ?></a>
                                                         <!-- <a class="dropdown-item" href="<?= base_url('student/change-class/' . $stu['id'] . '/mafsul') ?>"><?= lang('app.mafsul') ?></a> -->

@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 <div class="row">
     <div class="col-12">
@@ -24,7 +24,7 @@
                                     <tr>
                                         <?php $user = $fasl->user($dt['student_id']) ?>
                                         <td><?= $key + 1 ?></td>
-                                        <td><a href="<?= base_url('mafsul/show/' . $dt['id']) ?>"><?= $user['malaf'] ?></a></td>
+                                        <td><a href="<?= base_url('mafsul/show/' . $dt['id']) ?>"><?= $user['username'] ?></a></td>
                                         <td><?= ($user['name_ar'] ?? $user['name'] . ' ' . $user['lname']) ?></td>
                                         <td><a href="tel:+255<?= $user['phone'] ?>" class="badge badge-secondary">0<?= $user['phone'] ?></a></td>
                                         <td><a href="mailto:<?= $user['email'] ?>" class="badge bagde-info"><?= $user['email'] ?? lang('app.notFound') ?></a></td>

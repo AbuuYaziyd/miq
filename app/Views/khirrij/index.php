@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 <div class="row">
     <div class="col-12">
@@ -22,27 +22,25 @@
                                     <th>#</th>
                                     <th><?= lang('app.malaf') ?></th>
                                     <th><?= lang('app.name') ?></th>
-                                    <th><?= lang('app.phone') ?></th>
-                                    <th><?= lang('app.email') ?></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($std as $key => $usr) : ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
-                                        <td><a href="<?= base_url('khirrij/show/' . $usr['id']) ?>"><?= $usr['malaf'] ?></a></td>
-                                        <td><?= ($usr['name_ar'] ? $usr['name_ar'] : $usr['name'] . ' ' . $usr['lname']) ?></td>
+                                        <td><a href="<?= base_url('khirrij/show/' . $usr['id']) ?>"><?= $usr['username'] ?></a></td>
                                         <td>
-                                            <?php if ($usr['phone'] != null) : ?>
-                                                <a href="tel:+255<?= $usr['phone'] ?>" class="badge badge-secondary">0<?= $usr['phone'] ?></a>
+                                            <?php if (session('lang') != 'ar') : ?>
+                                                <?= $usr['name'] ?> <?= $usr['mname'] ?> <?= $usr['lname'] ?>
                                             <?php else : ?>
-                                                <span class="badge badge-danger" ><?= lang('app.notFound') ?></span>
+                                                <?= $usr['name'] ?> <?= $usr['mname'] ?> <?= $usr['lname'] ?>
                                             <?php endif ?>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <?php if ($usr['email'] != null) : ?>
-                                                <a href="mailto:<?= $usr['email'] ?>" class="badge bagde-info"><?= $usr['email'] ?></a></td>
-                                            <?php endif ?>
+                                                <a href="mailto:<?= $usr['email'] ?>" class="badge bagde-info"><?= $usr['email'] ?></a>
+                                        </td> -->
+                                    <?php endif ?>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 <div class="row">
     <?= $this->include('mafsul/info') ?>
