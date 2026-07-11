@@ -10,8 +10,7 @@
             </div>
             <div class="card-content">
                 <?php $validation = \Config\Services::validation() ?>
-                <?= form_open('year/update') ?>
-                <input type="hidden" name="id" value="<?= $year['id'] ?>">
+                <?= form_open('year/edit/' . $year['id']) ?>
                 <div class="row mx-1">
                     <div class="col">
                         <label for=""><b><?= lang('app.acYear') ?></b></label>

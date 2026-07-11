@@ -10,7 +10,7 @@
             </div>
             <div class="card-content">
                 <?php $validation = \Config\Services::validation() ?>
-                <?= form_open('year/create') ?>
+                <?= form_open('year/add') ?>
                 <div class="row mx-1">
                     <div class="col-12">
                         <label for=""><b><?= lang('app.acYear') ?></b></label>
@@ -19,13 +19,13 @@
                         <?php endif ?>
                         <fieldset class="form-group">
                             <select class="custom-select" name="name">
-                                <?php for ($i = date('Y'); $i < date('Y') + 2; $i++) : ?>
-                                    <option value="<?= $i ?>-01" <?= date('Y') == $i ? 'selected' : '' ?>><?= $i ?></option>
+                                <?php for ($i = $year - 1; $i < $year + 2; $i++) : ?>
+                                    <option value="<?= $i ?>" <?= $year == $i ? 'selected' : '' ?>><?= $i ?></option>
                                 <?php endfor ?>
                             </select>
                         </fieldset>
                     </div>
-                    <button type="submit" id="btn" class="btn btn-lg btn-block btn-primary mb-2"><?= lang('app.submit') ?></button>
+                    <button type="submit" id="btn" class="btn btn-lg btn-block btn-primary mb-2"><?= lang('app.send') ?></button>
                 </div>
                 </form>
             </div>

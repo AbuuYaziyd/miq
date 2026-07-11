@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Libraries\Hijri;
 use App\Models\ActivityLog;
 use App\Models\Year;
 
@@ -10,29 +11,75 @@ class YearController extends BaseController
 {
     public function index()
     {
+        // dd($_SESSION['role']);
         $year = new Year();
 
         $data['title'] = lang('app.acYear');
         $data['year'] = $year->findAll();
         $data['current'] = $year->where('current!=', null)->first();
-        // dd($data);
 
-        return view('year/index', $data);
+        if (session('role') != 'user') {
+            return view('year/index', $data);
+        } else {
+            return redirect()->to(base_url('user'));
+        }
+    }
+
+    public function change($id)
+    {
+        // dd($id);
+        $year = new Year();
+        $act = new ActivityLog();
+
+        $old = $year->where('current', 1)->first();
+        $dt = ['current' => null];
+        $year->update($old['id'], $dt);
+
+        $new = $year->find($id);
+        $dt = ['current' => 1];
+        $year->update($new['id'], $dt);
+
+        $act->addActivity(session('id'), 'Academic Year', 'Academic Year wa Changed Successfully!');
+
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+    }
+
+    public function show($id)
+    {
+        helper('form');
+        // dd($_SESSION['role']);
+        $year = new Year();
+
+        $data['title'] = lang('app.acYear');
+        $data['year'] = $year->find($id);
+
+        if (session('role') != 'user') {
+            return view('year/edit', $data);
+        } else {
+            return redirect()->to(base_url('user'));
+        }
     }
 
     public function add()
     {
         helper('form');
 
-        $data['title'] = lang('app.acYear');
+        $hjr = new Hijri;
 
-        return view('year/add', $data);
+        $data['title'] = lang('app.acYear');
+        $data['year'] = $hjr->strToHijri(date('Y-m-d'), "Y", session('lang'));
+        // dd($data);
+
+        if (session('role') != 'user') {
+            return view('year/add', $data);
+        } else {
+            return redirect()->to(base_url('user'));
+        }
     }
 
     public function create()
     {
-        // dd($this->request->getVar());
-
+        // dd($this->request->getVar('name'));
         helper('form');
 
         $act = new ActivityLog();
@@ -52,106 +99,62 @@ class YearController extends BaseController
             ]
         );
 
-        // dd($input);
         if (!$input) {
             $data['title'] = lang('app.acYear');
             $data['validation'] = $this->validator;
-
-            return view('year/add', $data);
+            echo view('year/add', $data);
         } else {
 
             $year = new Year();
 
-            $all_years = $year->findAll();
-
             $data = [
                 'name' => $this->request->getVar('name'),
             ];
-            // dd($data);
 
-            $year->save($data);
+            // dd($ok);
+            $ok = $year->save($data);
 
-            $act->addActivity(session('id'), 'Create New Academic Year', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
+            $act->addActivity(session('id'), 'Create New Academic Year', 'New Academic Year was Created Successfully!');
 
-            $all_years = $year->findAll();
-            if (count($all_years) == 1) {
-                $new = $all_years[0];
-                // dd($new);
-
-                $dt = ['current' => 1];
-                $year->update($new['id'], $dt);
+            if ($ok) {
+                return redirect()->to('year')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
             }
-
-            return redirect()->to('year')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
         }
     }
 
-    public function show($id)
-    {
-        helper('form');
-        
-        $year = new Year();
-
-        $data['title'] = lang('app.acYear');
-        $data['year'] = $year->find($id);
-        // dd($data);
-
-        return view('year/show', $data);
-    }
-
-    public function update()
+    public function edit($id)
     {
         $year = new Year();
         $act = new ActivityLog();
 
-        $id = $this->request->getVar('id');
-        $data = ['name' => $this->request->getVar('name')];
-        // dd($data, $id);
+        $data = [
+            'name' => $this->request->getVar('name'),
+        ];
 
         $ok = $year->update($id, $data);
 
-        $act->addActivity(session('id'), 'Update Academic Year', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
+        $act->addActivity(session('id'), 'Update Academic Year\' Data', 'Academic Year Data wa Updated Successfully!');
 
         if ($ok) {
             return redirect()->to('year')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-        } else {
+        }else {
             return redirect()->to('year')->with('type', 'error')->with('text', lang('app.unsuccessfully'))->with('title', lang('app.sorry'));
         }
     }
 
-    public function change($id)
+    public function delete($id)
     {
-        // dd($id);
-
         $year = new Year();
         $act = new ActivityLog();
 
-        $old = $year->where('current', 1)->first();
-        $dt = ['current' => null];
-        $year->update($old['id'], $dt);
+       $ok = $year->delete($id);
 
-        $new = $year->find($id);
-        $dt = ['current' => 1];
-        $year->update($new['id'], $dt);
+        $act->addActivity(session('id'), 'Delete Academic Year', 'Academic Year wa Deleted Successfully!');
 
-        $act->addActivity(session('id'), 'Academic Year', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
-
-        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+       if ($ok) {
+           return redirect()->to('year')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+       }else {
+            return redirect()->to('year')->with('type', 'error')->with('text', lang('app.unsuccessfully'))->with('title', lang('app.sorry'));
+       }
     }
-
-    // public function delete($id)
-    // {
-    //     $year = new Year();
-    //     $act = new ActivityLog();
-
-    //     $ok = $year->delete($id);
-
-    //     $act->addActivity(session('id'), 'Delete Academic Year', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
-
-    //     if ($ok) {
-    //         return redirect()->to('year')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-    //     } else {
-    //         return redirect()->to('year')->with('type', 'error')->with('text', lang('app.unsuccessfully'))->with('title', lang('app.sorry'));
-    //     }
-    // }
 }
