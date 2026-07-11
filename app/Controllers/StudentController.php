@@ -286,7 +286,7 @@ class StudentController extends BaseController
 
     public function edit($class_id)
     {
-        // dd($this->request->getVar());
+        dd($this->request->getVar());
 
         $reg = new User();
         $khir = new Khirrij();

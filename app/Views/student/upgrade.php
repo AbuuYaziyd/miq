@@ -38,7 +38,6 @@
                                             <td>
                                                 <select class="custom-select form-control" name="level<?= $stuKey ?>">
                                                     <?php foreach ($drs as $key => $dt) : ?>
-                                                        <?php if (count($drs) == $key + 1) : ?>
                                                             <option value="<?= $dt['id'] ?>" <?= $dt['id'] == $next ? 'selected' : '' ?>>
                                                                 <?php if (session('lang') != 'ar') : ?>
                                                                     <?= $dt['name'] ?>
@@ -46,7 +45,6 @@
                                                                     <?= $dt['name_ar'] ?>
                                                                 <?php endif ?>
                                                             </option>
-                                                        <?php endif ?>
                                                     <?php endforeach ?>
                                                     <option value="graduate" <?= $next == (count($drs) + 1) ? 'selected' : '' ?>><?= lang('app.graduates') ?></option>
                                                     <option value="masfsul"><?= lang('app.mafsul') ?></option>
