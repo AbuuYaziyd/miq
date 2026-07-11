@@ -48,7 +48,7 @@
                                                             </option>
                                                         <?php endif ?>
                                                     <?php endforeach ?>
-                                                    <option value="graduate"><?= lang('app.graduates') ?></option>
+                                                    <option value="graduate" <?= $next == (count($drs) + 1) ? 'selected' : '' ?>><?= lang('app.graduates') ?></option>
                                                     <option value="masfsul"><?= lang('app.mafsul') ?></option>
                                                 </select>
                                                 <!-- <a href="#" class="btn btn-outline-warning round btn-sm"><?= lang('app.look') ?></a> -->

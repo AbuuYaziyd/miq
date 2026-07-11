@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\ActivityLog;
 use App\Models\Country;
 use App\Models\Course;
+use App\Models\Gpa;
 use App\Models\Khirrij;
 use App\Models\Mafsul;
 use App\Models\School;
@@ -286,12 +287,15 @@ class StudentController extends BaseController
     public function edit($class_id)
     {
         // dd($this->request->getVar());
+
         $reg = new User();
         $khir = new Khirrij();
         $yr = new Year();
         $fasl = new Mafsul();
         $act = new ActivityLog();
         $cls = new Course();
+        $sch = new School();
+        $gpa = new Gpa();
 
         $count = count($this->request->getVar('id'));
         if ($count != null) {
@@ -306,130 +310,40 @@ class StudentController extends BaseController
                     'level' => $this->request->getVar('level' . $key),
                 ];
                 // dd($data);
-                $ok = $reg->update($id, $data);
+
+                $reg->update($id, $data);
 
                 $std = $reg->find($id);
                 // dd($count);
 
                 $act->addActivity(session('id'), 'Upgrade Student Class', $count . ' Student: ' . $std['name'] . ' ' . $std['lname'] . ' was assigned to Class: ' . ($cls->find($this->request->getVar('level' . $key))['name'] ?? lang('app.graduate')) . ' Successfully!');
 
+                $gpa_count = $gpa->where('student_id', $id)->countAllResults();
+                $sum_gpa = $gpa->where('student_id', $id)->selectSum('gpa')->get()->getRow()->gpa;
+                $school = $sch->find($cls->find($class_id)['school_id']);
+
                 if ($this->request->getVar('level' . $key) == 'graduate') {
                     $dt = [
                         'student_id' => $this->request->getVar('id')[$key],
                         'year_id' => $yr->where('current!=',  null)->first()['id'],
-                        'school_id' => $cls->find($this->request->getVar('old_class'))['school_id'],
+                        'school_id' => $school['id'],
+                        'certificate' => $school['name'],
+                        'certificate_no' => $std['username'],
+                        'gpa' => $sum_gpa / $gpa_count,
                     ];
-                    // dd($dt);
 
-                    $ok = $khir->save($dt);
+                    $d = ['role' => 'graduate', 'level' => 'graduate'];
+                    // dd($dt, $d);
+
+                    $khir->save($dt);
+                    $reg->update($id, $d);
 
                     $act->addActivity(session('id'), 'Create Graduates', 'Student: ' . $std['name'] . ' ' . $std['lname'] . ' was assigned to Graduates Successfully!');
                 }
             }
-            if ($ok) {
-                return redirect()->to('course/show/' . $class_id)->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-            }
+            // dd($dt, $d, $gpa_count, $sum_gpa);
+
+            return redirect()->to('course/show/' . $class_id)->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
         }
     }
-
-    // function changeClass($id, $level)
-    // {
-    //     $usr = new User();
-
-    //     $data = [
-    //         // 'level' => $level,
-    //         'role'  => $level,
-    //         'info'  => 'feesPaymentNotDone'
-    //     ];
-    //     // dd($data);
-
-    //     $usr->update($id, $data);
-
-    //     return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-    // }
-
-    // function back($id)
-    // {
-    //     $usr = new User();
-
-    //     $data = [
-    //         'role'  => 'student',
-    //         'info'  => null,
-    //     ];
-    //     // dd($data);
-
-    //     $usr->update($id, $data);
-
-    //     return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
-    // }
-
-    // public function show($id)
-    // {
-    //     $class = new Academy();
-
-    //     $data['title'] = lang('app.students');
-    //     $data['stu'] = $class->join('users', 'users.level=classes.id')
-    //         ->where(['level' => $id, 'fn' => 'student'])->orderBy('id', 'RANDOM')
-    //         ->findAll();
-    //     $data['class'] = $class->find($id);
-
-
-    //     dd($data);
-    //     if (session('role') != 'user') {
-    //         return view('user/view', $data);
-    //     } else {
-    //         return redirect()->to(base_url('user'));
-    //     }
-    // }
-
-    // public function create()
-    // {
-    //     // dd(($this->request->getVar()));
-    //     $act = new ActivityLog();
-    //     $cls = new Academy();
-
-    //     $count = count($this->request->getVar('student_id'));
-    //     if ($count != null) {
-    //         for ($i = 0; $i < $count; $i++) {
-
-    //             $user = new User();
-
-    //             $id = $this->request->getVar('student_id')[$i];
-    //             $data = [
-    //                 'level' => $this->request->getVar('class_id'),
-    //             ];
-    //             // dd(($data));
-    //             $user->update($id, $data);
-    //         }
-
-    //         $act->addActivity(session('id'), 'Assign Students to Class', $count . ' Students were assigned to Class: ' . $cls->find($this->request->getVar('class_id'))['name'] . ' Successfully!');
-
-    //         return redirect()->to('class')->with('type', 'success')
-    //             ->with('text', lang('app.successfully'))
-    //             ->with('title', lang('app.done'));
-    //     } else {
-    //         return redirect()->to('class')->with('type', 'error')
-    //             ->with('text', lang('app.unsuccessfully'))
-    //             ->with('title', lang('app.sorry'));
-    //     }
-    // }
-
-    // public function addStudents($id)
-    // {
-    //     helper('form');
-
-    //     $class = new Academy();
-    //     $user = new User();
-
-    //     $data['title'] = lang('app.academic');
-    //     $data['class'] = $class->find($id);
-    //     $data['drs'] = $class->findAll();
-    //     $data['stu'] = $user->where(['role' => 'user', 'fn' => 'student', 'level' => $data['class']['id']])
-    //         ->findAll();
-    //     $data['new'] = $user->where(['role' => 'user', 'fn' => 'student', 'level' => null])
-    //         ->findAll();
-
-    //     // dd($data);
-    //     return view('student/add', $data);
-    // }
 }

@@ -477,23 +477,6 @@ class ResultController extends BaseController
         $data['gp'] = $gp->where('student_id', $id)->orderBy('course_id', 'asc')->select('course_id')->distinct()->findAll();
         $data['res'] = $res->where(['student_id' => $id, 'course_id' => $stu['level']])->findAll();
         $data['p'] = $gp;
-
-        // $user = new User();
-        // $crs = new Course();
-        // $gpa = new Gpa();
-        // $res = new Result();
-        // $sub = new Subject();
-
-        // $stu = $user->find($id);
-        // $class = $crs->find($stu['level']);
-
-        // $data['title'] = lang('app.results');
-        // $data['stu'] = $stu;
-        // $data['class'] = $class;
-        // $data['sub'] = $sub->where('course_id', $stu['level'])->findAll();
-        // $data['gpas'] = $gpa->where('student_id', $id)->orderBy('course_id', 'asc')->select(['year_id', 'course_id'])->distinct()->findAll();
-        // $data['res'] = $res->where(['student_id' => $id, 'course_id' => $stu['level']])->findAll();
-        // $data['gpa'] = $gpa;
         // dd($data);
 
         return view('result/student', $data);
