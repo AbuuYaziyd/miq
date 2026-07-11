@@ -100,8 +100,12 @@ class YearController extends BaseController
         );
 
         if (!$input) {
+            $hjr = new Hijri;
+
             $data['title'] = lang('app.acYear');
+            $data['year'] = $hjr->strToHijri(date('Y-m-d'), "Y", session('lang'));
             $data['validation'] = $this->validator;
+            
             echo view('year/add', $data);
         } else {
 
