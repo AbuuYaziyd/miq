@@ -13,6 +13,29 @@ $hjr = new Hijri();
 $user = $usr->find($user['id']);
 $age = $dob->diff($now)->y;
 $nationality = $nat->where('code', $user['nationality'])->first()['country_en'];
+
+$ujumbe = htmlspecialchars('
+السلام عليكم ورحمة الله وبركاته%0A%0A
+مرحبا: ' . $user['name_ar'] . ' '  . $user['mname_ar'] . ' '  . $user['lname_ar'] . '، في موقعنا. 
+%0A
+
+اسم المستخدم: ' . $user['username'] . ' %0A
+البريد الإلكتروني: ' . $user['email'] . ' %0A
+كلمة المرور: ' . strtoupper($user['lname']) . ' %0A%0A
+
+الرابط: https://ikhlas.rf.gd %0A%0A
+بارك الله فيكم!
+%0A%0A
+______________________________________%0A%0A
+Assalaamu Alaikum warahmatullahi Wabarakaatuh! %0A%0A
+
+Karibu Ndugu: ' . $user['name'] . ' '  . $user['mname'] . ' '  . $user['lname'] . ', Katika website yetu. %0A%0A
+Namba ya Usajili: ' . $user['username'] . ' %0A
+Email: ' . $user['email'] . ' %0A
+Nenosiri: ' . strtoupper($user['lname']) . '%0A%0A
+Wavuti: https://ikhlas.rf.gd
+%0A%0A
+Baarakallahu Fiykum!');
 ?>
 <div class="row">
     <div class="col-lg-12">
@@ -38,6 +61,24 @@ $nationality = $nat->where('code', $user['nationality'])->first()['country_en'];
                         </h3>
                         <p class="m-0"><?= $user['email'] ?></p>
                         <p class="m-0"><?= $user['phone'] ?></p>
+                        <?php if (session('role') == 'admin') : ?>
+                            <ul class="list-inline list-inline-pipe">
+                                <?php if ($user['phone'] != null) : ?>
+                                    <li>
+                                        <a href="https://wa.me/<?= str_replace(' ', '', $user['phone']) ?>?text=<?= $ujumbe ?>" class="btn btn-success btn-sm round" target="_blank">
+                                            <i class="la la-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php if ($user['email'] != null) : ?>
+                                    <li>
+                                        <a href="mailto:<?= $user['email'] ?>?subject=<?= lang('app.appName') ?>&body=<?= $ujumbe ?>." class="btn btn-warning btn-sm round" target="_blank">
+                                            <i class="icon-envelope"></i>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                            </ul>
+                        <?php endif ?>
                     </div>
                     <div class="col-lg-8">
                         <table class="table table-striped text-center">
