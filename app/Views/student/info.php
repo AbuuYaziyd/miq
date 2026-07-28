@@ -26,7 +26,7 @@ $ujumbe = htmlspecialchars('
 البريد الإلكتروني: ' . $stu['email'] . ' %0A
 كلمة المرور: ' . strtoupper($stu['lname']) . ' %0A%0A
 
-الرابط: https://ikhlas.rf.gd %0A%0A
+الرابط: https://ibnulqayyim.rf.gd %0A%0A
 بارك الله فيكم!
 %0A%0A
 ______________________________________%0A%0A
@@ -36,7 +36,7 @@ Karibu Ndugu: ' . $stu['name'] . ' '  . $stu['mname'] . ' '  . $stu['lname'] . '
 Namba ya Usajili: ' . $stu['username'] . ' %0A
 Email: ' . $stu['email'] . ' %0A
 Nenosiri: ' . strtoupper($stu['lname']) . '%0A%0A
-Wavuti: https://ikhlas.rf.gd
+Wavuti: https://ibnulqayyim.rf.gd
 %0A%0A
 Baarakallahu Fiykum!');
 ?>
