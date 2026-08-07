@@ -84,6 +84,7 @@
                                         <?php endif ?>
                                     </a>
                                 <?php endforeach ?>
+                                <a class="dropdown-item" href="<?= base_url('student/change-class/' . $st['id'] . '/mafsul') ?>"><?= lang('app.mafsul') ?></a>
                             </div>
                         </div>
                         <?= lang('app.course') ?>
