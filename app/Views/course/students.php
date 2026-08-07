@@ -28,7 +28,7 @@
                                 <?php foreach ($std as $key => $data) : ?>
                                     <tr>
                                         <td style="width: 2px;"><a href="<?= base_url('students/info/' . $data['id']) ?>"><?= $data['username'] ?></a></td>
-                                        <td style="width: 30%;"><?= ($data['name_ar'] ? $data['name_ar'] : $data['name'] . ' ' . $data['lname']) ?></td>
+                                        <td style="width: 30%;"><?= $data['name_ar'] ?> <?= $data['mname_ar'] ?> <?= $data['lname_ar'] ?></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

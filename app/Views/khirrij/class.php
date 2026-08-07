@@ -26,7 +26,7 @@
                                             <?php foreach ($new as $key => $data) : ?>
                                                 <tr>
                                                     <td><?= $key + 1 ?></td>
-                                                    <td><?= $data['username'] ?></td>
+                                                    <td><?= $data['malaf'] ?></td>
                                                     <td><?= ($data['name_ar'] ?? $data['lname']) ?></td>
                                                     <td><input type="checkbox" name="stuId[]" value="<?= $data['id'] ?>"></td>
                                                 </tr>

@@ -8,7 +8,7 @@
                     <select name="year" class="custom-select col-8 pull-right" id="year_select">
                         <option value="<?= base_url('khirrij') ?>" selected><?= lang('app.choose') ?></option>
                         <?php foreach ($yr as $y) : ?>
-                            <option value="<?= base_url('khirrij/year/' . $y['year_id']) ?>" <?= $yr_id == $y['year_id'] ? 'selected' : '' ?>><?= $k->year($y['year_id'])['name'] ?></option>
+                            <option value="<?= base_url('khirrij/year/' . $y['year_id']) ?>" <?= $yr_id == $y['year_id'] ? 'selected' : '' ?>><?= $khr->year($y['year_id'])['name'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </h2>
@@ -19,22 +19,34 @@
                         <table class="table table-striped table-bordered dataex-res-constructor">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th><?= lang('app.malaf') ?></th>
+                                    <th><?= lang('app.certNo') ?></th>
                                     <th><?= lang('app.name') ?></th>
-                                    <!-- <th><?= lang('app.phone') ?></th>
-                                    <th><?= lang('app.email') ?></th> -->
+                                    <th><?= lang('app.name') ?></th>
+                                    <th><?= lang('app.taqdir') ?></th>
+                                    <th><?= lang('app.taqdir') ?></th>
+                                    <th><?= lang('app.city') ?></th>
+                                    <th><?= lang('app.city') ?></th>
+                                    <th><?= lang('app.dob') ?></th>
+                                    <th><?= lang('app.dob') ?></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($std as $key => $data) : ?>
+                                <?php foreach ($std as $key => $us) : ?>
+                                    <?php $user = $khr->user($us['student_id']) ?>
                                     <tr>
-                                        <?php $usr = $k->kh($data['student_id']) ?>
-                                        <td><?= $key + 1 ?></td>
-                                        <td><a href="<?= base_url('khirrij/show/' . $usr['id']) ?>" ><?= $usr['username'] ?></a></td>
-                                        <td><?= ($usr['name_ar'] ? $usr['name_ar'] : $usr['name'] . ' ' . $usr['lname']) ?></td>
-                                        <!-- <td><a href="tel:+255<?= $usr['phone'] ?>" class="badge badge-secondary">0<?= $usr['phone'] ?></a></td>
-                                        <td><a href="mailto:<?= $usr['email'] ?>" class="badge bagde-info"><?= $usr['email'] ?? lang('app.notFound') ?></a></td> -->
+                                        <td>
+                                            <a href="<?= base_url('khirrij/show/' . $user['id']) ?>" class="btn btn-sm btn-outline-primary round">
+                                                <?= $user['certificate_no'] ?? lang('app.notFound') ?>
+                                                <a>
+                                        </td>
+                                        <td><?= $user['name_ar'] ?> <?= $user['mname_ar'] ?> <?= $user['lname_ar'] ?></td>
+                                        <td><?= $user['name'] ?> <?= $user['mname'] ?> <?= $user['lname'] ?></td>
+                                        <td><?= $khr->grade(round($us['gpa']))['name'] ?></td>
+                                        <td><?= $khr->grade(round($us['gpa']))['name_ar'] ?></td>
+                                        <td><?= $khr->city($user['city_id'])['name_ar'] ?></td>
+                                        <td><?= $khr->city($user['city_id'])['name'] ?></td>
+                                        <td><?= $hjr->strToHijri($user['dob'], "d F Y", 'ar') ?>هـ</td>
+                                        <td><?= $user['dob'] ?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

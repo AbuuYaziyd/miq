@@ -49,10 +49,40 @@ class Khirrij extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    function kh($id)
+    function khirrij($id)
+    {
+        $kh = new Khirrij();
+        $data = $kh->where('student_id', $id)->first();
+        // dd($data);
+
+        return $data;
+    }
+
+    function city($id)
+    {
+        $kh = new City();
+        $data = $kh->find($id);
+        // dd($data);
+
+        return $data;
+    }
+
+    public function grade($mark)
+    {
+        $res = new Grade();
+        $data = $res->where('bidaya>=', $mark)->where('nihaya<=', $mark)->first();
+        // dd($data);
+
+        return $data;
+    }
+
+    function user($id)
     {
         $kh = new User();
-        return $kh->find($id);
+        $data = $kh->where('id', $id)->first();
+        // dd($data);
+
+        return $data;
     }
 
     function year($id)

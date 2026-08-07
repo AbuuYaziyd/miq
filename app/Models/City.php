@@ -4,31 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Admin extends Model
+class City extends Model
 {
-    protected $table            = 'admins';
+    protected $DBGroup          = 'default';
+    protected $table            = 'cities';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
+    protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [
-        'student_id',
-        'school_id',
-        'course_id',
-        'subject_id',
-        'teacher_id',
-        'year_id',
-        'username',
-        'course_status',
-        'final_status',
-    ];
-
-    protected bool $allowEmptyInserts = false;
-    protected bool $updateOnlyChanged = true;
-
-    protected array $casts = [];
-    protected array $castHandlers = [];
+    protected $allowedFields    = [];
 
     // Dates
     protected $useTimestamps = false;

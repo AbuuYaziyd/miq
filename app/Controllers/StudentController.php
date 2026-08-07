@@ -220,16 +220,22 @@ class StudentController extends BaseController
     public function data()
     {
         $crs = new Course();
-        $stu = new User();
+        $usr = new User();
         $sch = new School();
+
+        if (session('lang') != 'ar') {
+            $stu = $usr->where('level', null)->where('fn', 'student')->orderBy('name', 'asc')->findAll();
+        } else {
+            $stu = $usr->where('level', null)->where('fn', 'student')->orderBy('name_ar', 'asc')->findAll();
+        }
 
         $data['title'] = lang('app.students');
         $data['sch'] = $sch->findAll();
         $data['class'] = $crs->findAll();
         $data['s'] = $sch;
         $data['c'] = $crs;
-        $data['user'] = $stu->find(session('id'));
-        $data['stu'] = $stu->where('level', null)->where('fn', 'student')->findAll();
+        $data['stu'] = $stu;
+        $data['user'] = $usr->find(session('id'));
         // dd($data);
 
         return view('student/data', $data);

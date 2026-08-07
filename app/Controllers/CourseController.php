@@ -106,8 +106,9 @@ class CourseController extends BaseController
         $usr = new User();
         $crs = new Course();
 
-        $data['title'] = lang('app.subject');
-        $data['course'] = $crs->find($id);
+        $course = $crs->find($id);
+        $data['title'] = lang('app.students') . ' - ' . $course['name_ar'];
+        $data['course'] = $course;
         $data['usr'] = $usr;
         $data['std'] = $usr->where('level', $id)->orderBy('sex', 'desc')->findAll();
         // dd($data);

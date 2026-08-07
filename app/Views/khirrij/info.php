@@ -20,7 +20,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a href="<?= base_url('user/profile/' . $stu['id']) ?>" class="btn btn-outline-info round btn-sm"><?= $stu['username'] ?></a></td>
+                                        <td><a href="<?= base_url('user/profile/' . $stu['id']) ?>" class="btn btn-outline-info round btn-sm"><?= $stu['malaf'] ?></a></td>
                                         <td><?= $stu['name_ar'] ?? $stu['name'] . ' ' . $stu['lname'] ?></td>
                                         <td><?= $stu['sex'] != 'M' ? lang('app.female') : lang('app.male') ?></td>
                                         <?php if ($stu['dob'] != null) : ?>

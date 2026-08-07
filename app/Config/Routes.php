@@ -158,9 +158,9 @@ $routes->group('teacher', function ($routes) {
  */
 $routes->group('khirrij', function ($routes) {
     $routes->get('/', 'KhirrijController::index', ['filter' => 'auth']);
-    // $routes->get('show/(:num)', 'KhirrijController::show/$1', ['filter' => 'auth']);
-    // $routes->get('year/(:num)', 'KhirrijController::year/$1', ['filter' => 'auth']);
-    // $routes->get('info/(:num)', 'KhirrijController::info/$1', ['filter' => 'auth']);
+    $routes->get('show/(:num)', 'KhirrijController::show/$1', ['filter' => 'auth']);
+    $routes->get('year/(:num)', 'KhirrijController::year/$1', ['filter' => 'auth']);
+    $routes->get('info/(:num)', 'KhirrijController::show/$1', ['filter' => 'auth']);
 });
 
 /*

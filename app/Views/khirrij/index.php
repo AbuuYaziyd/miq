@@ -8,7 +8,7 @@
                     <select name="year" class="custom-select col-8 pull-right" id="year_select">
                         <option value="<?= base_url('khirrij') ?>" selected><?= lang('app.choose') ?></option>
                         <?php foreach ($yr as $y) : ?>
-                            <option value="<?= base_url('khirrij/year/' . $y['year_id']) ?>"><?= $k->year($y['year_id'])['name'] ?></option>
+                            <option value="<?= base_url('khirrij/year/' . $y['year_id']) ?>"><?= $khr->year($y['year_id'])['name'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </h2>
@@ -19,28 +19,34 @@
                         <table class="table table-striped table-bordered dataex-res-constructor">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th><?= lang('app.malaf') ?></th>
+                                    <th><?= lang('app.username') ?></th>
                                     <th><?= lang('app.name') ?></th>
+                                    <th><?= lang('app.name') ?></th>
+                                    <th><?= lang('app.taqdir') ?></th>
+                                    <th><?= lang('app.taqdir') ?></th>
+                                    <th><?= lang('app.city') ?></th>
+                                    <th><?= lang('app.city') ?></th>
+                                    <th><?= lang('app.dob') ?></th>
+                                    <th><?= lang('app.dob') ?></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($std as $key => $usr) : ?>
+                                <?php foreach ($std as $key => $us) : ?>
+                                    <?php $grad = $khr->khirrij($us['id']) ?>
                                     <tr>
-                                        <td><?= $key + 1 ?></td>
-                                        <td><a href="<?= base_url('khirrij/show/' . $usr['id']) ?>"><?= $usr['username'] ?></a></td>
                                         <td>
-                                            <?php if (session('lang') != 'ar') : ?>
-                                                <?= $usr['name'] ?> <?= $usr['mname'] ?> <?= $usr['lname'] ?>
-                                            <?php else : ?>
-                                                <?= $usr['name'] ?> <?= $usr['mname'] ?> <?= $usr['lname'] ?>
-                                            <?php endif ?>
+                                            <a href="<?= base_url('khirrij/show/' . $us['id']) ?>" class="btn btn-sm btn-<?= $grad['status'] == 'waiting' ? 'outline-' : '' ?>primary round">
+                                                <?= $grad['certificate_no'] ?>
+                                                <a>
                                         </td>
-                                        <!-- <td>
-                                            <?php if ($usr['email'] != null) : ?>
-                                                <a href="mailto:<?= $usr['email'] ?>" class="badge bagde-info"><?= $usr['email'] ?></a>
-                                        </td> -->
-                                    <?php endif ?>
+                                        <td><?= $us['name_ar'] ?> <?= $us['mname_ar'] ?> <?= $us['lname_ar'] ?></td>
+                                        <td><?= $us['name'] ?> <?= $us['mname'] ?> <?= $us['lname'] ?></td>
+                                        <td><?= $khr->grade(round($grad['gpa']))['name'] ?></td>
+                                        <td><?= $khr->grade(round($grad['gpa']))['name_ar'] ?></td>
+                                        <td><?= $khr->city($us['city_id'])['name_ar'] ?></td>
+                                        <td><?= $khr->city($us['city_id'])['name'] ?></td>
+                                        <td><?= $hjr->strToHijri($us['dob'], "d F Y", 'ar') ?>هـ</td>
+                                        <td><?= $us['dob'] ?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

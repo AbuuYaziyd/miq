@@ -29,7 +29,7 @@
                                 <?php foreach ($std as $key => $data) : ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
-                                        <td><?= $data['username'] ?></td>
+                                        <td><?= $data['malaf'] ?></td>
                                         <td><?= ($data['name_ar'] ? $data['name_ar'] : $data['name'] . ' ' . $data['lname']) ?></td>
                                         <td><?= ($data['sex'] = 'M' ? 'ذكر' : 'أنثى') ?></td>
                                         <td><?= $data['dob'] ?></td>
