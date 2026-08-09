@@ -111,7 +111,7 @@ class ResultController extends BaseController
         $sub = new Subject();
         $yr = new Year();
 
-        $data['title'] = lang('app.students');
+        $data['title'] = lang('app.marks');
         $data['schools'] = $sch->findAll();
         $data['courses'] = $crs->findAll();
         $data['sub'] = $sub;
