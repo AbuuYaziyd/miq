@@ -304,6 +304,7 @@ $routes->group('result', function ($routes) {
     $routes->get('teacher/(:num)', 'ResultController::teacher/$1', ['filter' => 'teacher']);
     $routes->get('(:segment)/edit/(:num)', 'ResultController::edit/$1/$2', ['filter' => 'teacher']);
     $routes->get('insert/(:num)', 'ResultController::insert/$1', ['filter' => 'teacher']);
+    $routes->get('add-subject-marks/(:num)', 'ResultController::addSubjectMarks/$1', ['filter' => 'auth']);
 });
 
 /*

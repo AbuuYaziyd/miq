@@ -21,6 +21,7 @@
                         <hr>
                         <div class="row">
                             <?php foreach ($sch->course($sc['id']) as $key => $dt) : ?>
+                                <?php $students = $sub->stuCount($dt['id']) ?>
                                 <?php if ($crs->stuCount($dt['id']) >= 1) : ?>
                                     <div class="col-md-<?= count($sch->course($sc['id'])) == 2 ? 6 : 4 ?> mb-1">
                                         <?php if ($crs->checkGPA($dt['id'], $year['id'], $exam)) : ?>
@@ -29,7 +30,8 @@
                                             <?php $calc = false ?>
                                             <?php $no = 0 ?>
                                             <?php foreach ($sub->where('course_id', $dt['id'])->findAll() as $key => $sb) : ?>
-                                                <?php if ($sub->done($sb['id'])[$exam] == $sub->stuCount($dt['id'])) : ?>
+                                                <?php $done = $sub->done($sb['id']) ?>
+                                                <?php if ($done[$exam] == $students) : ?>
                                                     <span href="<?= base_url('result/' . $exam . '/marks/' . $sb['id']) ?>" class="btn btn-success round mb-1">
                                                         <?php if (session('lang') != 'ar') : ?>
                                                             <?= $sb['name'] ?>
@@ -39,7 +41,7 @@
                                                     </span>
                                                     <?php $calc = true ?>
                                                     <?php $no = $no + 1 ?>
-                                                <?php elseif ($sub->done($sb['id'])[$exam . '_mark'] == $sub->stuCount($dt['id'])) : ?>
+                                                <?php elseif ($done[$exam . '_mark'] == $students) : ?>
                                                     <a href="<?= base_url('result/' . $exam . '/marks/' . $sb['id']) ?>" class="btn btn-outline-success round mb-1">
                                                         <?php if (session('lang') != 'ar') : ?>
                                                             <?= $sb['name'] ?>
@@ -47,12 +49,23 @@
                                                             <?= $sb['name_ar'] ?>
                                                         <?php endif ?></a>
                                                 <?php else : ?>
-                                                    <a href="<?= base_url('result/' . $exam . '/marks/' . $sb['id']) ?>" class="btn btn-danger round mb-1">
-                                                        <?php if (session('lang') != 'ar') : ?>
-                                                            <?= $sb['name'] ?>
-                                                        <?php else : ?>
-                                                            <?= $sb['name_ar'] ?>
-                                                        <?php endif ?></a>
+                                                    <?php if ($done['mark'] != $students) : ?>
+                                                        <a href="<?= base_url('result/add-subject-marks/' . $sb['id']) ?>" class="btn btn-outline-purple round mb-1 sure">
+                                                            <?php if (session('lang') != 'ar') : ?>
+                                                                <?= $sb['name'] ?>
+                                                            <?php else : ?>
+                                                                <?= $sb['name_ar'] ?>
+                                                            <?php endif ?>
+                                                        </a>
+                                                    <?php else : ?>
+                                                        <a href="<?= base_url('result/' . $exam . '/marks/' . $sb['id']) ?>" class="btn btn-danger round mb-1">
+                                                            <?php if (session('lang') != 'ar') : ?>
+                                                                <?= $sb['name'] ?>
+                                                            <?php else : ?>
+                                                                <?= $sb['name_ar'] ?>
+                                                            <?php endif ?>
+                                                        </a>
+                                                    <?php endif ?>
                                                 <?php endif ?>
                                             <?php endforeach ?>
                                             <?php if ($no != $sub->where('course_id', $dt['id'])->countAllResults()) : ?>

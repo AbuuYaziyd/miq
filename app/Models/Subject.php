@@ -102,6 +102,7 @@ class Subject extends Model
         $mark['final'] = $res->where(['subject_id' => $id, 'year_id' => $year, 'final_status' => 'done'])->countAllResults();
         $mark['course_mark'] = $res->where(['subject_id' => $id, 'year_id' => $year, 'course_status' => 'marked'])->countAllResults();
         $mark['final_mark'] = $res->where(['subject_id' => $id, 'year_id' => $year, 'final_status' => 'marked'])->countAllResults();
+        $mark['mark'] = $res->where(['subject_id' => $id, 'year_id' => $year])->countAllResults();
         // dd($mark);
 
         return $mark;

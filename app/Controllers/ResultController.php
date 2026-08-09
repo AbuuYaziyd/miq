@@ -176,6 +176,38 @@ class ResultController extends BaseController
         }
     }
 
+    function addSubjectMarks($sub_id)
+    {
+        $res = new Result();
+        $yr = new Year();
+        $sbj = new Subject();
+        $cls = new Course();
+        $usr = new User();
+
+        $year_id = $yr->where('current', 1)->first()['id'];
+        $subject = $sbj->find($sub_id);
+        $class = $cls->find($subject['course_id']);
+        $stu = $usr->where('level', $class['id'])->findAll();
+        // dd($sub_id, $year_id, $stu, $class);
+
+        foreach ($stu as $dt) {
+            $data = [
+                'course_id' => $class['id'],
+                'school_id' => $class['school_id'],
+                'subject_id' => $sub_id,
+                'year_id' => $year_id,
+                'username' => $dt['username'],
+                'student_id' => $dt['id'],
+                'course_status' => 'add',
+                'final_status' => 'add',
+            ];
+            $res->save($data);
+        }
+        // dd($data);
+
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+    }
+
     public function sign($id, $sex)
     {
         $res = new Result();
