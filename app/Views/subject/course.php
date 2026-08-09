@@ -19,7 +19,13 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <h4><b><?= $dt['name'] ?></b><a href="<?= base_url('subject/show/' . $dt['id']) ?>" class="btn btn-sm btn-warning round float-right"><?= lang('app.open') ?></a></h4>
+                        <h4><b>
+                                <?php if (session('lang') != 'ar') : ?>
+                                    <?= $dt['name'] ?>
+                                <?php else : ?>
+                                    <?= $dt['name_ar'] ?>
+                                    <?php endif ?>
+                                </b><a href="<?= base_url('subject/show/' . $dt['id']) ?>" class="btn btn-sm btn-warning round float-right"><?= lang('app.open') ?></a></h4>
                     </div>
                     <li class="list-group-item">
                         <span class="btn btn-sm round btn-outline-pink float-right"><?= $dt['ramz'] ?? lang('app.notFound') ?></span><?= lang('app.ramz') ?>
