@@ -79,7 +79,7 @@ $total = 0;
                                             <?php elseif ($mark[$exam . '_status'] == 'done' || $mark[$exam . '_status'] == 'gpa') : ?>
                                                 <td style="width: 1%;"><?= $mark[$exam] ?></td>
                                             <?php else : ?>
-                                                <td style="width: 1%;"><a href="<?= base_url('result/' . $exam . '/' . $mark['id']) ?>" class="btn btn-secondary btn-sm round"><?= $mark[$exam] ?></a></td>
+                                                <td style="width: 1%;"><a href="<?= base_url('result/' . $exam . '/edit/' . $mark['id']) ?>" class="btn btn-secondary btn-sm round"><?= $mark[$exam] ?></a></td>
                                             <?php endif ?>
                                         <?php endif ?>
                                         <td style="width: 1%;">

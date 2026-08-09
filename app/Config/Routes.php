@@ -302,8 +302,8 @@ $routes->group('result', function ($routes) {
     $routes->post('change', 'ResultController::change', ['filter' => 'auth']);
     $routes->post('change-final', 'ResultController::changeFinal', ['filter' => 'auth']);
     $routes->get('teacher/(:num)', 'ResultController::teacher/$1', ['filter' => 'teacher']);
-    $routes->get('(:segment)/(:num)', 'ResultController::edit/$1/$2', ['filter' => 'teacher']);
-    $routes->get('insert/(:num)', 'ResultController::insert/$1', ['filter' => 'admin']);
+    $routes->get('(:segment)/edit/(:num)', 'ResultController::edit/$1/$2', ['filter' => 'teacher']);
+    $routes->get('insert/(:num)', 'ResultController::insert/$1', ['filter' => 'teacher']);
 });
 
 /*

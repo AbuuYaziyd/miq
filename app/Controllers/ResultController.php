@@ -510,7 +510,7 @@ class ResultController extends BaseController
         $student = $user->find($id);
         $course = $crs->find($student['level']);
         $year_id = $yer->where('current', 1)->first()['id'];
-
+        // dd($student, $id);
 
         foreach ($sub->where('course_id', $student['level'])->findAll() as $sb) {
             $data = [
@@ -521,9 +521,8 @@ class ResultController extends BaseController
                 'username' => $student['username'],
                 'student_id' => $student['id'],
                 'teacher_id' => $sb['head_id'],
-                'status' => 'marked',
+                'status' => 'add',
             ];
-
             $res->save($data);
         }
         // dd($data);
