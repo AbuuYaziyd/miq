@@ -90,7 +90,7 @@ class UserController extends BaseController
 
         $act->addActivity(session('id'), 'Update ' . $user['name'] .' Data', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
 
-        return redirect()->route($user['role'])->with('type', 'success')->with('title', lang('app.done'))->with('text', lang('app.successfully'));
+        return redirect()->to('user/show/' . $user['id'])->with('type', 'success')->with('title', lang('app.done'))->with('text', lang('app.successfully'));
     }
 
     // public function image()

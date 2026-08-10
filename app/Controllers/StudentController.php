@@ -29,7 +29,7 @@ class StudentController extends BaseController
 
         $student = $usr->find(session('id'));
         $class = $crs->find($student['level']);
-        // dd($class);
+        dd($class);
 
         $data['title'] = lang('app.academic');
         $data['stu'] = $student;
