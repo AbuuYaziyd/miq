@@ -49,7 +49,7 @@
                                                             <?= $sb['name_ar'] ?>
                                                         <?php endif ?></a>
                                                 <?php else : ?>
-                                                    <?php if ($done['mark'] != $students) : ?>
+                                                    <?php if ($done['mark'] == 0) : ?>
                                                         <a href="<?= base_url('result/add-subject-marks/' . $sb['id']) ?>" class="btn btn-outline-purple round mb-1 sure">
                                                             <?php if (session('lang') != 'ar') : ?>
                                                                 <?= $sb['name'] ?>
