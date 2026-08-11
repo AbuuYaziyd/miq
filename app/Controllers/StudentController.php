@@ -137,10 +137,10 @@ class StudentController extends BaseController
             return view('student/new', $data);
         } else {
 
-            $user = new User();
+            $usr = new User();
             $act = new ActivityLog();
 
-            $username = $user->studentID();
+            $username = $usr->studentID();
             $email = $this->request->getVar('email');
             $name = str_replace(' ', '', $this->request->getVar('name'));
             $mname = str_replace(' ', '', $this->request->getVar('mname'));
@@ -165,11 +165,12 @@ class StudentController extends BaseController
             ];
             // dd($data);
 
-            $user->save($data);
+            $usr->save($data);
+            $insert_id = $usr->getInsertID();
 
             $act->addActivity(session('id'), 'Register New User - Authentication', 'User was Registered by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('malaf') . '!');
 
-            return redirect()->route('student')->with('type', 'success')->with('text', lang('app.successfully') . lang('app.useLast'))->with('title', lang('app.done'));
+            return redirect()->to('student/page/' . $insert_id)->with('type', 'success')->with('text', lang('app.successfully') . lang('app.useLast'))->with('title', lang('app.done'));
         }
     }
 
