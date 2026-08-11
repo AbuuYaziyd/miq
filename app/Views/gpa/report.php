@@ -169,7 +169,7 @@
             <tbody>
                 <?php foreach ($results as $key => $rs) : ?>
                     <?php $mark = $rs['course'] + $rs['final'] ?>
-                    <?php $grade = $gpa->grade($mark) ?>
+                    <?php $grade = $gpa->grade($mark * 2) ?>
                     <tr>
                         <?php if (session('lang') != 'ar') : ?>
                             <td><?= $grade['name'] ?></td>
@@ -211,9 +211,9 @@
                         <td><b><?= $students ?></b></td>
                         <td><b><?= round($muadala->$exam) ?></b></td>
                         <?php if (session('lang') != 'ar') : ?>
-                            <td><b><?= $gpa->grade(round($muadala->$exam))['name'] ?> </b></td>
+                            <td><b><?= $gpa->grade(round($muadala->$exam) * 2)['name'] ?> </b></td>
                         <?php else : ?>
-                            <td><b><?= $gpa->grade(round($muadala->$exam))['name_ar'] ?></b></td>
+                            <td><b><?= $gpa->grade(round($muadala->$exam) * 2)['name_ar'] ?></b></td>
                         <?php endif ?>
                     </tr>
                 </tbody>
@@ -225,12 +225,12 @@
                     <p><?= $mudir['extra_ar'] ?></p>
                     <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
-                    <p><?= $mudir['value_ar'] ?><br><?= date('d/m/Y') ?></p>
+                    <p><?= $mudir['value_ar'] ?><br><?= date('d-m-Y') ?></p>
                 <?php else : ?>
                     <p><?= $mudir['extra'] ?></p>
                     <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
-                    <p><?= $mudir['value'] ?><br><?= date('d/m/Y') ?></p>
+                    <p><?= $mudir['value'] ?><br><?= date('d-m-Y') ?></p>
                 <?php endif ?>
             </div>
             <div>
@@ -244,12 +244,12 @@
                     <p><?= $taalim['extra_ar'] ?></p>
                     <img src="<?= base_url($taalim['info']) ?>" height="35px" alt="sign" />
                     <div class="signature-line"></div>
-                    <p><?= $taalim['value_ar'] ?><br><?= date('d/m/Y') ?></p>
+                    <p><?= $taalim['value_ar'] ?><br><?= date('d-m-Y') ?></p>
                 <?php else : ?>
                     <p><?= $taalim['extra'] ?></p>
                     <img src="<?= base_url($taalim['info']) ?>" height="35px" alt="sign" />
                     <div class="signature-line"></div>
-                    <p><?= $taalim['value'] ?><br><?= date('d/m/Y') ?></p>
+                    <p><?= $taalim['value'] ?><br><?= date('d-m-Y') ?></p>
                 <?php endif ?>
             </div>
         </div>

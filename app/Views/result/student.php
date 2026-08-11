@@ -5,14 +5,14 @@
     <?php if ($res[0]['course_status'] != 'gpa') : ?>
         <div class="row">
             <div class="col-12 mb-2">
-                <a href="<?= base_url('result/show/' . $stu['id'] . '/' . $class['id']) ?>" class="btn btn-lg btn-block btn-outline-info"><b><?= lang('app.thisYearMarks') ?></b></a>
+                <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $class['id']) ?>" class="btn btn-lg btn-block btn-outline-info"><b><?= lang('app.thisYearMarks') ?></b></a>
             </div>
         </div>
     <?php endif ?>
 <?php elseif ($res[0]['course_status'] != 'gpa') : ?>
     <div class="row">
         <div class="col-12">
-            <a href="<?= base_url('result/show/' . $stu['id'] . '/' . $class['id']) ?>" class="btn btn-lg btn-block btn-outline-info"><b><?= lang('app.thisYearMarks') ?></b></a>
+            <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $class['id']) ?>" class="btn btn-lg btn-block btn-outline-info"><b><?= lang('app.thisYearMarks') ?></b></a>
         </div>
     </div>
 <?php else : ?>
