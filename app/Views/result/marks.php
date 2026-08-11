@@ -60,7 +60,7 @@ $err = 0;
                                     <?php if ($mark != null) : ?>
                                         <tr>
                                             <td>
-                                                <a href="<?= base_url('result/view/' . $exam . '/' . $dt['id'] . '/' . $course['id']) ?>" class="btn btn-sm round btn-outline-black">
+                                                <a href="<?= base_url('result/student/' . $dt['id']) ?>" class="btn btn-sm round btn-outline-black">
                                                     <input type="hidden" name="id[]" value="<?= $mark['id'] ?>">
                                                     <?= $dt['username'] ?>
                                                 </a>

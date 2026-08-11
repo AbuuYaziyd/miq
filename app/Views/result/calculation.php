@@ -25,7 +25,14 @@
                                 <?php if ($crs->stuCount($dt['id']) >= 1) : ?>
                                     <div class="col-md-<?= count($sch->course($sc['id'])) == 2 ? 6 : 4 ?> mb-1">
                                         <?php if ($crs->checkGPA($dt['id'], $year['id'], $exam)) : ?>
-                                            <a href="<?= base_url('result/' . $exam . '/show/' . $dt['id'] . '/' . $year['id']) ?>" class="btn btn-purple btn-lg btn-block mb-1"><?= lang('app.openResults') ?></a>
+                                            <a href="<?= base_url('result/' . $exam . '/show/' . $dt['id'] . '/' . $year['id']) ?>" class="btn btn-purple btn-lg btn-block mb-1">
+                                                <?= lang('app.results') ?> -
+                                                <?php if (session('lang') != 'ar') : ?>
+                                                    <?= $dt['name'] ?>
+                                                <?php else : ?>
+                                                    <?= $dt['name_ar'] ?>
+                                                <?php endif ?>
+                                            </a>
                                         <?php else : ?>
                                             <?php $calc = false ?>
                                             <?php $no = 0 ?>

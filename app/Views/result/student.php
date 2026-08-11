@@ -47,7 +47,14 @@
                     <div class="card-body text-center">
                         <?php foreach ($sch->course($sc['id']) as $key => $cl) : ?>
                             <?php if ($sch->checkResults($stu['id'], $cl['id'])) : ?>
-                                <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $cl['id']) ?>" class="btn btn-primary btn-block round" target="_blank"><i class="ft ft-eye"></i> | <?= $cl['name'] ?></a>
+                                <a href="<?= base_url('result/user/' . $stu['id'] . '/' . $cl['id']) ?>" class="btn btn-primary btn-block round" target="_blank">
+                                    <i class="ft ft-eye"></i> | 
+                                    <?php if (session('lang') != 'ar') : ?>
+                                        <?= $cl['name'] ?>
+                                    <?php else : ?>
+                                        <?= $cl['name_ar'] ?>
+                                    <?php endif ?>
+                                </a>
                                 <?php $ok = true ?>
                             <?php else : ?>
                                 <span class="btn btn-secondary btn-block round">
