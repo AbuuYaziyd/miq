@@ -315,6 +315,7 @@ $routes->group('result', function ($routes) {
 $routes->group('gpa', function ($routes) {
     $routes->get('class/(:segment)/(:num)/(:num)', 'GpaController::class/$1/$2/$3', ['filter' => 'admin']);
     $routes->get('kashf/(:num)/(:num)', 'GpaController::kashf/$1/$2', ['filter' => 'auth']);
+    $routes->get('report/(:segment)/(:num)/(:num)', 'GpaController::report/$1/$2/$3', ['filter' => 'auth']);
     // $routes->post('edit', 'GpaController::edit', ['filter' => 'auth']);
     // $routes->get('make/(:num)', 'GpaController::make/$1', ['filter' => 'admin']);
     $routes->get('view/(:num)/(:num)', 'GpaController::view/$1/$2', ['filter' => 'teacher']);

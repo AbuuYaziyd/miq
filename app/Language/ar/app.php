@@ -267,6 +267,7 @@ return [
     'openResult' => 'تم فتح النتائج',
     'openResults' => 'افتح النتائج',
     'marks' => 'نتائج',
+    'allMarks' => 'جميع النتائج',
     'studentNotFound' => 'لا يوجد تسجيلات الطلاب! ابحث المشرف',
     'enterResults' => 'إضافة النتائج',
     'editResults' => 'تعديل النتيجة',

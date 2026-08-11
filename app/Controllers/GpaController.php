@@ -55,6 +55,38 @@ class GpaController extends BaseController
         return view('gpa/kashf', $data);
     }
 
+    public function report($exam, $id, $fasl)
+    {
+        // dd($fasl, $id, $exam);
+        $res = new Result();
+        $set = new Setting();
+        $yer = new Year();
+        $gpa = new Gpa();
+        $usr = new User();
+        $crs = new Course();
+        $sub = new Subject();
+
+        $year_id = $yer->where('current', 1)->first()['id'];
+
+        $data['title'] = lang('app.academicProgress');
+        $data['gpa'] = $gpa;
+        $data['exam'] = $exam;
+        $data['class'] = $crs->find($fasl);
+        $data['student'] = $usr->find($id);
+        $data['mudir'] = $set->where('name', 'mudir')->first();
+        $data['taalim'] = $set->where('name', 'taalim')->first();
+        $data['colour'] = $set->where('name', 'colour')->first();
+        $data['subjects'] = $sub->where('course_id', $fasl)->findAll();
+        $data['students'] = $usr->where('level', $fasl)->countAllResults();
+        $data['results'] =  $res->where(['student_id' => $id, 'course_id' => $fasl, 'year_id' => $year_id])->findAll();
+        $data['marks'] =  $res->where(['student_id' => $id, 'course_id' => $fasl, 'year_id' => $year_id])->selectSum($exam)->get()->getRow();
+        $data['muadala'] =  $res->where(['student_id' => $id, 'course_id' => $fasl, 'year_id' => $year_id])->selectAvg($exam)->get()->getRow();
+        $data['stu_gpa'] =  $gpa->where(['student_id' => $id, 'course_id' => $fasl, 'year_id' => $year_id])->first();
+        // dd($data);
+
+        return view('gpa/report', $data);
+    }
+
     function progress($id)
     {
         $gpa = new Gpa();
