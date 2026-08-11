@@ -138,8 +138,13 @@ $period = $prd->findAll();
                                 <?php foreach ($subjects as $dt) : ?>
                                     <?php $teacher = $usr->find($dt['head_id']) ?>
                                     <tr>
-                                        <td><?= $dt['name'] ?></td>
-                                        <td><?= $teacher['kun_yah'] ?> <?= $teacher['name'] ?> <?= $teacher['mname'] ?> <?= $teacher['lname'] ?></td>
+                                        <?php if (session('lang') != 'ar') : ?>
+                                            <td><?= $dt['name'] ?></td>
+                                            <td><?= $teacher['kun_yah'] ?> <?= $teacher['name'] ?> <?= $teacher['mname'] ?> <?= $teacher['lname'] ?></td>
+                                        <?php else : ?>
+                                            <td><?= $dt['name_ar'] ?></td>
+                                            <td><?= $teacher['kun_yah_ar'] ?> <?= $teacher['name_ar'] ?> <?= $teacher['mname_ar'] ?> <?= $teacher['lname_ar'] ?></td>
+                                        <?php endif ?>
                                         <td>
                                             <?php if ($dt['book'] != null) : ?>
                                                 <a href="<?= base_url($dt['book']) ?>" class="btn btn-sm btn-teal round" target="_blank"><i class="ft ft-download-cloud"></i></a>
