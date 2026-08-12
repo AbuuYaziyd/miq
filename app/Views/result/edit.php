@@ -24,7 +24,7 @@
                             <tr>
                                 <td class="text-truncate">
                                     <ul>
-                                        <span class="btn btn-outline-primary btn-sm round"><?= $user['username'] ?></span><br>
+                                        <a href="<?= base_url('result/user/' . $res['student_id'] . '/' . $res['course_id']) ?>" class="btn btn-primary btn-sm round"><?= $user['username'] ?></a><br>
                                         <?php if (session('lang') != 'ar') : ?>
                                             <?= $user['name'] ?> <?= $user['mname'] ?> <?= $user['lname'] ?>
                                         <?php else : ?>
