@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Libraries\Hijri;
+use App\Models\ActivityLog;
 use App\Models\Course;
 use App\Models\Gpa;
 use App\Models\Result;
@@ -102,55 +103,86 @@ class GpaController extends BaseController
         return view('gpa/progress', $data);
     }
 
-    // public function edit()
-    // {
-    //     // dd($this->request->getVar());
-    //     $class_id = $this->request->getVar('class_id');
-    //     $gpa_id = $this->request->getVar('gpa_id');
-    //     $user_id = $this->request->getVar('user_id');
+    public function edit()
+    {
+        $sub = new Subject();
+        $res = new Result();
+        $act = new ActivityLog();
 
-    //     $sub = new Subject();
-    //     $res = new Result();
-    //     $gpa = new Gpa();
-    //     $act = new ActivityLog();
+        // dd($this->request->getVar());
 
-    //     $subjects = $sub->where('class_id', $class_id)->countAllResults();
-    //     $student_results = $res->where(['class_id' => $class_id, 'student_id' => $user_id])->findAll();
-    //     // dd($student_results);
+        $course_id = $this->request->getVar('course_id');
+        $user_id = $this->request->getVar('user_id');
+        $year_id = $this->request->getVar('year_id');
+        $exam = $this->request->getVar('exam');
+        // dd($course_id, $user_id, $exam);
 
-    //     // Total Marks
-    //     $marks = $gpa->sum($user_id, $class_id);
+        $subjects = $sub->where('course_id', $course_id)->countAllResults();
+        $student_results = $res->where(['course_id' => $course_id, 'student_id' => $user_id, 'year_id' => $year_id])->findAll();
+        // dd($student_results, $subjects);
 
-    //     //Points 
-    //     $pt = $res->where(['student_id' => $user_id, 'class_id' => $class_id])->findAll();
-    //     $p = 0;
+        foreach ($student_results as $r) {
+            $dt = [$exam . '_status' => 'edit'];
+            $res->update($r['id'], $dt);
+        }
 
-    //     foreach ($pt as $mark_point) {
-    //         $point = ($res->grade(($mark_point['course'] + $mark_point['final']))['point']);
-    //         $p = $p + $point;
-    //     }
+        $act->addActivity(session('id'), 'Edit Marks - AFTER Rendering GPA -', 'Results was Opened for Editing!');
 
-    //     // Calculate GPA
-    //     $muadala = ($marks / (($subjects) * 100)) * 5;
+        return redirect()->back();
+    }
 
-    //     $data = [
-    //         'marks' => $marks,
-    //         'gpa' => $muadala,
-    //         'point' => $p,
-    //     ];
-    //     // dd($data);
+    public function gpa()
+    {
+        $sub = new Subject();
+        $res = new Result();
+        $gpa = new Gpa();
+        $act = new ActivityLog();
 
-    //     $gpa->update($gpa_id, $data);
+        // dd($this->request->getVar());
 
-    //     foreach ($student_results as $r) {
-    //         $dt = ['status' => 'done'];
-    //         $res->update($r['id'], $dt);
-    //     }
+        $course_id = $this->request->getVar('course_id');
+        $user_id = $this->request->getVar('user_id');
+        $gpa_id = $this->request->getVar('gpa_id');
+        $year_id = $this->request->getVar('year_id');
+        $exam = $this->request->getVar('exam');
+        // dd($course_id, $user_id, $exam);
 
-    //     $act->addActivity(session('id'), 'GPA Calculation -AFTER EDITING MARKS-', 'GPA was Edited and Saved Successfully!');
+        $subjects = $sub->where('course_id', $course_id)->countAllResults();
+        $student_results = $res->where(['course_id' => $course_id, 'student_id' => $user_id, 'year_id' => $year_id])->findAll();
+        // dd($student_results, $subjects);
 
-    //     return redirect()->back();
-    // }
+        // Total Marks
+        $marks = $gpa->sum($user_id, $course_id)['sum'];
+
+        // Calculate GPA
+        $muadala = ($marks / (($subjects) * 100)) * 100;
+
+        $data = [
+            $exam . '_marks' => $marks,
+            'gpa' => $muadala,
+        ];
+        // dd($data);
+
+        $gpa->update($gpa_id, $data);
+
+        foreach ($student_results as $r) {
+            $dt = [$exam . '_status' => 'gpa'];
+            $res->update($r['id'], $dt);
+        }
+
+        $gpas = $gpa->where(['course_id' => $course_id, 'year_id' => $year_id])->orderBy($exam . '_marks', 'desc')->findAll();
+        foreach ($gpas as $key => $gp) {
+            $data = [
+                $exam . '_position' => $key + 1,
+            ];
+            $gpa->update($gp['id'], $data);
+        }
+        // dd($gpas, $data);
+
+        $act->addActivity(session('id'), 'GPA Calculation - AFTER EDITING MARKS -', 'GPA was Edited and Saved Successfully!');
+
+        return redirect()->back();
+    }
 
     public function view($id, $yr)
     {

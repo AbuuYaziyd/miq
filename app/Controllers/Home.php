@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Result;
 use App\Models\Setting;
 use App\Models\Website;
 
@@ -43,6 +44,8 @@ class Home extends BaseController
 
     function test()
     {
-        dd('test');
+        $res = new Result();
+        $result = $res->where(['year_id' => 2, 'course>' => 50])->findAll();
+        dd('test', $result);
     }
 }
