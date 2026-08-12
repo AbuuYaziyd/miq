@@ -85,8 +85,7 @@
                             <?php endforeach ?>
                         </tbody>
                     </table><br>
-                    <?php $msr = $g->gpa($mark['student_id'], $mark['course_id']) ?>
-                    <?php if ($mark['course_status'] != null && $msr != null) : ?>
+                    <?php if ($mark['course_status'] != null) : ?>
                         <table class="table table-striped table-bordered" style="text-align: center;">
                             <thead>
                                 <th><?= lang('app.position') ?></th>
@@ -97,29 +96,30 @@
                             </thead>
                             <thead>
                                 <th><?= lang('app.fasliy') ?></th>
-                                <td><?= $msr['subjects'] ?></td>
-                                <td><?= intval($msr['course_marks']) ?></td>
-                                <td><?= $msr['course_gpa'] ?></td>
+                                <td><?= $gpa['subjects'] ?></td>
+                                <td><?= intval($gpa['course_marks']) ?></td>
+                                <td><?= $gpa['course_gpa'] ?></td>
                                 <td>
-                                    <span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>">
+                                    <span style="color:<?= $r->masar(intval($gpa['course_gpa'] * 2))['colour'] ?>">
                                         <?php if (session('lang') != 'ar') : ?>
-                                            <b><?= $r->masar(intval($msr['course_gpa'] * 2))['name'] ?></b>
+                                            <b><?= $r->masar(intval($gpa['course_gpa'] * 2))['name'] ?></b>
                                         <?php else : ?>
-                                            <b><?= $r->masar(intval($msr['course_gpa'] * 2))['name_ar'] ?></b>
+                                            <b><?= $r->masar(intval($gpa['course_gpa'] * 2))['name_ar'] ?></b>
                                         <?php endif ?>
                                     </span>
                                 </td>
                             </thead>
                             <thead>
+                                <?php $trkm = $g->tarakum($mark['student_id'], $mark['course_id']) ?>
                                 <th><?= lang('app.tarakum') ?></th>
-                                <?php if ($msr['course_gpa'] != null && $msr != null) : ?>
-                                    <td><b><?= $msr['subjects'] ?></b></td>
-                                    <td><b><?= round($msr['course_marks']) ?></b></td>
-                                    <td><b><?= $msr['course_gpa'] ?></b></td>
+                                <?php if ($gpa['course_gpa'] != null && $gpa != null) : ?>
+                                    <td><b><?= $gpa['subjects'] ?></b></td>
+                                    <td><b><?= round($gpa['course_marks']) ?></b></td>
+                                    <td><b><?= $gpa['course_gpa'] ?></b></td>
                                     <?php if (session('lang') != 'ar') : ?>
-                                        <td><span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($msr['course_gpa'] * 2))['name'] ?></b></span></td>
+                                        <td><span style="color:<?= $r->masar(intval($gpa['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($gpa['course_gpa'] * 2))['name'] ?></b></span></td>
                                     <?php else : ?>
-                                        <td><span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($msr['course_gpa'] * 2))['name_ar'] ?></b></span></td>
+                                        <td><span style="color:<?= $r->masar(intval($gpa['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($gpa['course_gpa'] * 2))['name_ar'] ?></b></span></td>
                                     <?php endif ?>
                                 <?php else : ?>
                                     <td><b><?= lang('app.soon') ?></b></td>
@@ -139,9 +139,9 @@
                                 <?php if ($mark['course_status'] != 'gpa') : ?>
                                     <td colspan="3"><b><?= lang('app.soon') ?></b></td>
                                 <?php else : ?>
-                                    <td colspan="3"><b><?= $msr['course_position'] ?></b></td>
+                                    <td colspan="3"><b><?= $gpa['course_position'] ?></b></td>
                                 <?php endif ?>
-                                <td colspan="3"><b><?= $msr['number_of_students'] ?? $c->stuCount($class['id']) ?></b></td>
+                                <td colspan="3"><b><?= $gpa['number_of_students'] ?? $c->stuCount($class['id']) ?></b></td>
                             </thead>
                         </table>
                     <?php endif ?>

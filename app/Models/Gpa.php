@@ -144,6 +144,16 @@ class Gpa extends Model
         return $tr;
     }
 
+    function tarakum($user, $class)
+    {
+        $pr = new Gpa();
+
+        $tr = $pr->where(['student_id' => $user, 'course_id<=' => $class])->findAll();
+        // dd($tr);
+
+        return $tr;
+    }
+
     function position($user, $class, $yr)
     {
         $pr = new Gpa();
