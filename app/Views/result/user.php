@@ -79,7 +79,7 @@ if (session('lang') != 'ar') {
                                                             <td style="width: 1%;">*</td>
                                                             <td style="width: 15%;">*</td>
                                                         <?php elseif ($mark['course_status'] == 'marked' || $mark['course_status'] == 'edit') : ?>
-                                                            <td style="width: 1%;"><a href="<?= base_url('result/course/' . $mark['id']) ?>" class="btn btn-secondary btn-sm round"><?= $mark['course'] ?></a></td>
+                                                            <td style="width: 1%;"><a href="<?= base_url('result/course/edit/' . $mark['id']) ?>" class="btn btn-secondary btn-sm round"><?= $mark['course'] ?></a></td>
                                                             <?php if (session('lang') != 'ar') : ?>
                                                                 <td style="width: 1%;"><span class="<?= ($sum < 60 ? 'danger' : '') ?>"><?= $r->grade($sum)['ramz'] ?></span></td>
                                                                 <td style="width: 15%;"><span class="<?= ($sum < 60 ? 'danger' : '') ?>"><?= $r->grade($sum)['name'] ?></span></td>

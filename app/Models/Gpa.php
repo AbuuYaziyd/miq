@@ -119,9 +119,12 @@ class Gpa extends Model
     function sum($user, $class)
     {
         $res = new Result;
+        $yr = new Year();
 
-        $course = $res->where(['student_id' => $user, 'course_id' => $class])->selectSum('course')->get()->getRow()->course;
-        $final = $res->where(['student_id' => $user, 'course_id' => $class])->selectSum('final')->get()->getRow()->final;
+        $curr_yr = $yr->where('current', 1)->first()['id'];
+
+        $course = $res->where(['student_id' => $user, 'course_id' => $class, 'year_id' => $curr_yr])->selectSum('course')->get()->getRow()->course;
+        $final = $res->where(['student_id' => $user, 'course_id' => $class, 'year_id' => $curr_yr])->selectSum('final')->get()->getRow()->final;
 
         $data['course'] = $course;
         $data['final'] = $final;

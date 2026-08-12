@@ -313,7 +313,7 @@ class ResultController extends BaseController
 
                 $gpa->update($ck['id'], $data);
 
-                $results = $res->where(['student_id' => $ck['student_id'], 'course_id' => $id])->findAll();
+                $results = $res->where(['student_id' => $ck['student_id'], 'course_id' => $id, 'year_id' => $current_year])->findAll();
                 // dd($results);
                 foreach ($results as $re) {
                     $result_data = [$exam . '_status' => 'gpa'];
@@ -328,7 +328,7 @@ class ResultController extends BaseController
             return redirect()->to('result/' . $exam . '/position/' . $id);
         } else {
             foreach ($students as $dt) {
-                $results = $res->where(['student_id' => $dt['id'], 'course_id' => $id])->findAll();
+                $results = $res->where(['student_id' => $dt['id'], 'course_id' => $id, 'year_id' => $current_year])->findAll();
                 // dd($results);
 
                 // Total Marks
@@ -614,15 +614,16 @@ class ResultController extends BaseController
         $yr = new Year();
 
         $class = $cl->find($cls);
+        $year = $yr->where('current', 1)->first();
 
-        $data['res'] =  $res->where(['course_id' => $cls, 'student_id' => $usr])->findAll();
+        $data['res'] =  $res->where(['course_id' => $cls, 'student_id' => $usr, 'year_id' => $year['id']])->findAll();
         $data['user'] = $user->find($usr);
-        $data['year'] = $yr->where('current', 1)->first();
+        $data['year'] = $year;
         $data['class'] = $class;
-        $data['gpa'] = $gpa->where(['student_id' => $usr, 'course_id' => $cls])->first();
+        $data['gpa'] = $gpa->where(['student_id' => $usr, 'course_id' => $cls, 'year_id' => $year['id']])->first();
         $data['grade'] = $grade->findAll();
         // $data['sub'] = $sub->where('course_id', $cls)->findAll();
-        $data['sub'] = $res->select('subject_id')->where(['course_id' => $cls, 'student_id' => $usr])->findAll();
+        $data['sub'] = $res->select('subject_id')->where(['course_id' => $cls, 'student_id' => $usr, 'year_id' => $year['id']])->findAll();
         $data['c'] = $cl;
         $data['r'] = $res;
         $data['g'] = $gpa;
