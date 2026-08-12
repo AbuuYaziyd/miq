@@ -100,11 +100,15 @@
                                 <td><?= $msr['subjects'] ?></td>
                                 <td><?= intval($msr['course_marks']) ?></td>
                                 <td><?= $msr['course_gpa'] ?></td>
-                                <?php if (session('lang') != 'ar') : ?>
-                                    <td><span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($msr['course_gpa'] * 2))['name'] ?></b></span></td>
-                                <?php else : ?>
-                                    <td><span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>"><b><?= $r->masar(intval($msr['course_gpa'] * 2))['name_ar'] ?></b></span></td>
-                                <?php endif ?>
+                                <td>
+                                    <span style="color:<?= $r->masar(intval($msr['course_gpa'] * 2))['colour'] ?>">
+                                        <?php if (session('lang') != 'ar') : ?>
+                                            <b><?= $r->masar(intval($msr['course_gpa'] * 2))['name'] ?></b>
+                                        <?php else : ?>
+                                            <b><?= $r->masar(intval($msr['course_gpa'] * 2))['name_ar'] ?></b>
+                                        <?php endif ?>
+                                    </span>
+                                </td>
                             </thead>
                             <thead>
                                 <th><?= lang('app.tarakum') ?></th>
