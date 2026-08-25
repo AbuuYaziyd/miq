@@ -1,3 +1,14 @@
+<?php
+
+use App\Models\Setting;
+
+$set = new Setting();
+
+$markaz = $set->where('name', 'name')->first();
+$colour = $set->where('name', 'colour')->first();
+$location = $set->where('name', 'location')->first();
+$logo = $set->where('name', 'logo')->first();
+?>
 <!DOCTYPE html>
 <html class="loading" lang="<?= session('lang') ?>" data-textdirection="<?= session('lang') != 'ar' ? 'ltr' : 'rtl' ?>">
 
@@ -5,15 +16,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="<?= lang('app.appName') . ' | ' . lang('location') ?>">
-    <meta name="keywords" content="<?= lang('app.appName') . ' | ' . lang('location') ?>">
+    <meta name="description" content="<?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
+    <meta name="keywords" content="<?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="#806240">
-    <title><?= $title ?> | <?= lang('app.appName') ?></title>
+    <meta name="theme-color" content="<?= $colour['value'] ?>">
+    <title><?= $title ?> | <?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
+    <link rel="apple-touch-icon" href="<?= base_url($logo['link']) ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url($logo['link']) ?>">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/vendors' . (session('lang') != 'ar' ? '' : '-rtl') . '.min.css') ?>">

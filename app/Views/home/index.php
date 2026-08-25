@@ -1,3 +1,12 @@
+<?php
+
+use App\Models\Setting;
+
+$set = new Setting();
+
+$location = $set->where('name', 'location')->first();
+$logo = $set->where('name', 'logo')->first();
+?>
 <?= $this->extend('layouts/auth') ?>
 
 <?= $this->section('content') ?>
@@ -10,7 +19,7 @@
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div>
-                                <a href="<?= base_url() ?>"><img src="<?= base_url('app-assets/images/logo/logo.png') ?>" alt="logo" height="180px"></a>
+                                <a href="<?= base_url() ?>"><img src="<?= base_url($logo['link']) ?>" alt="logo" height="180px"></a>
                             </div>
                         </div>
                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span><?= lang('app.appName') ?></span>
@@ -25,7 +34,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="text-center">
-                            <div class="text-center"><a href="<?= base_url() ?>" class="btn btn-sm btn-outline-purple round"><?= lang('app.appName') ?> | <?= lang('app.ourLocation') ?></a></div>
+                            <div class="text-center"><a href="<?= base_url() ?>" class="btn btn-sm btn-outline-purple round"><?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?></a></div>
                         </div>
                     </div>
                 </div>
