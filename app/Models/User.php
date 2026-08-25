@@ -74,19 +74,19 @@ class User extends Model
     function teacherID()
     {
         $usr = new User();
-        $hjr = new Hijri();
+        $set = new Setting();
 
         $query = $usr->where('fn', 'teacher')->orderBy('id', 'desc')->first();
-        $hijri = $hjr->GeToHijr(date('d'), date('m'), date('Y'));
-        // dd($hijri, $query);
+        $reg = 1 . sprintf('%02s', $set->where('name', 'register')->first()['value']);
+        // dd($query, $reg);
 
         if ($query != null) {
             $invc = $query['username'];
             $invc = substr($invc, 3, 6);
             $invc = $invc + 1;
-            $username = 106 . sprintf('%03s', $invc);
+            $username = $reg . sprintf('%03s', $invc);
         } else {
-            $username = 106 . sprintf('%03s', 1);
+            $username = $reg . sprintf('%03s', 1);
         }
         // dd($username);
 
@@ -97,18 +97,20 @@ class User extends Model
     {
         $usr = new User();
         $hjr = new Hijri();
+        $set = new Setting();
 
         $query = $usr->where('fn', 'student')->orderBy('id', 'desc')->first();
         $hijri = $hjr->GeToHijr(date('d'), date('m'), date('Y'));
-        // dd($hijri, $query);
+        $reg = sprintf('%02s', $set->where('name', 'register')->first()['value']);
+        // dd($hijri, $query, $reg);
 
         if ($query != null) {
             $invc = $query['username'];
             $invc = substr($invc, 6, 10);
             $invc = $invc + 1;
-            $username = substr($hijri['year'], 2) . sprintf('%02s', $hijri['month']) . date("s") . sprintf('%04s', $invc);
+            $username = substr($hijri['year'], 2) . $reg . sprintf('%06s', $invc);
         } else {
-            $username = substr($hijri['year'], 2) . sprintf('%02s', $hijri['month']) . date("s") . sprintf('%04s', 1);
+            $username = substr($hijri['year'], 2) . $reg . sprintf('%06s', 1);
         }
         // dd($username);
 

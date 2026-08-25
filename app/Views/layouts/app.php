@@ -45,6 +45,10 @@ $logo = $set->where('name', 'logo')->first();
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/forms/toggle/switchery.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/plugins/forms/switch.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/core/colors/palette-switch.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/pickers/miniColors/jquery.minicolors.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/pickers/spectrum/spectrum.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/core/colors/palette-gradient.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/plugins/pickers/colorpicker/colorpicker.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?= $this->renderSection('styles') ?>
@@ -111,6 +115,9 @@ $logo = $set->where('name', 'logo')->first();
     <script src="<?= base_url('app-assets/vendors/js/forms/toggle/switchery.min.js') ?>"></script>
     <script src="<?= base_url('app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js') ?>"></script>
     <script src="<?= base_url('app-assets/js/scripts/forms/switch.js') ?>"></script>
+    <script src="<?= base_url('app-assets/vendors/js/pickers/miniColors/jquery.minicolors.min.js') ?>"></script>
+    <script src="<?= base_url('app-assets/vendors/js/pickers/spectrum/spectrum.js') ?>"></script>
+    <script src="<?= base_url('app-assets/js/scripts/pickers/colorpicker/picker-color.js') ?>"></script>
 
     <?= $this->renderSection('scripts') ?>
 

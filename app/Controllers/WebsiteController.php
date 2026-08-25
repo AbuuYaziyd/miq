@@ -23,6 +23,9 @@ class WebsiteController extends BaseController
         $data['postabox'] = $set->where('name', 'postabox')->first();
         $data['mudir'] = $set->where('name', 'mudir')->first();
         $data['taalim'] = $set->where('name', 'taalim')->first();
+        $data['logo'] = $set->where('name', 'logo')->first();
+        $data['colour'] = $set->where('name', 'colour')->first();
+        $data['register'] = $set->where('name', 'register')->first();
         $data['mauqii'] = $set->where('name', 'register')->first();
         // dd($data);
 
@@ -540,6 +543,7 @@ class WebsiteController extends BaseController
             'info'      => $this->request->getVar('info'),
             'value'     => $this->request->getVar('value'),
             'extra'     => $this->request->getVar('extra'),
+            'link'      => $this->request->getVar('link'),
             'value_ar'  => $this->request->getVar('value_ar'),
             'extra_ar'  => $this->request->getVar('extra_ar'),
         ];
@@ -563,6 +567,63 @@ class WebsiteController extends BaseController
         $data['image'] = $set->find($id);
         // dd($data);
 
-        return view('web/image', $data);
+        return view('web/sign', $data);
+    }
+
+    function signature()
+    {
+        helper('form');
+
+        $set = new Setting();
+        $act = new ActivityLog();
+
+        $id = $this->request->getVar('id');
+
+        // dd($this->request->getFile('link'));
+        if ($this->request->getFile('link')) {
+            $validationRule = $this->validate(
+                [
+                    'link' => 'uploaded[link]|mime_in[link,image/jpg,image/jpeg,image/png,image/svg]|max_size[link,2048]',
+                ],
+                [   // Errors
+                    'link' => [
+                        'uploaded' => lang('error.uploaded'),
+                        'mime_in' => lang('error.mime'),
+                        'max_size' => lang('error.max_size'),
+                    ],
+                ]
+            );
+
+            // dd($validationRule);
+            if (!$validationRule) {
+                $error = $this->validator->getError('link');
+                // dd($error);
+                return redirect()->back()->with('type', 'error')->with('title', $error);
+            }
+
+            $img = $set->find($id)['link'];
+            // dd($img);
+
+            // dd(file_exists($img));
+            if (file_exists($img)) {
+                unlink($img);
+            }
+
+            $newImg = $this->request->getFile('link');
+            $ext = $newImg->getClientExtension();
+            $name = time() . $id . '.' . $ext;
+            // dd($name);
+
+            $dataIMG = [
+                'link' => 'public/logo/' . $name,
+            ];
+
+            $newImg->move('public/logo/', $name);
+            $set->update($id, $dataIMG);
+
+            $act->addActivity(session('id'), 'Carousel Image Change', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
+        }
+
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
     }
 }

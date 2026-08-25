@@ -21,28 +21,6 @@
     <div class="col-4">
         <div class="card">
             <div class="card-header">
-                <h3><b><?= lang('app.email') ?></b></h3>
-            </div>
-            <div class="card-content">
-                <div class="row mx-1">
-                    <div class="col-md-12 mb-2">
-                        <?= form_open('web/setting') ?>
-                        <div class="input-group">
-                            <input type="text" name="value" class="form-control" value="<?= $email['value'] ?>">
-                            <input type="hidden" name="id" value="<?= $email['id'] ?>">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit"><?= lang('app.submit') ?></button>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="card">
-            <div class="card-header">
                 <h3><b><?= lang('app.fullname') ?></b></h3>
             </div>
             <div class="card-content">
@@ -184,6 +162,81 @@
             </div>
         </div>
     </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header">
+                <h3>
+                    <b><?= lang('app.register') ?></b>
+                    <a href="<?= base_url('web/sign/' . $logo['id']) ?>" class="btn btn-danger round pull-right"><?= lang('app.logo') ?></a>
+                </h3>
+            </div>
+            <div class="card-content">
+                <div class="row mx-1">
+                    <div class="col-md-12 mb-2">
+                        <?= form_open('web/setting') ?>
+                        <label for=""><b><?= lang('app.email') ?></b></label>
+                        <div class="input-group">
+                            <input type="text" name="value" class="form-control" value="<?= $email['value'] ?>">
+                            <input type="hidden" name="id" value="<?= $email['id'] ?>">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit"><?= lang('app.submit') ?></button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <?php if (session('fn') == 'admin') : ?>
+                        <div class="col-md-12 mb-2">
+                            <?= form_open('web/setting') ?>
+                            <label for=""><b><?= lang('app.regNo') ?></b></label>
+                            <div class="input-group">
+                                <input type="number" name="value" class="form-control" value="<?= $register['value'] ?>">
+                                <input type="hidden" name="id" value="<?= $register['id'] ?>">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><?= lang('app.submit') ?></button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php if (session('fn') == 'admin') : ?>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3><b><?= lang('app.colours') ?></b></h3>
+                </div>
+                <div class="card-content">
+                    <?= form_open('web/setting') ?>
+                    <div class="row mx-1">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group text-center">
+                                <label><b>Primary</b></label>
+                                <p>
+                                    <input type="text" name="value" class="form-control preferredHex" value="<?= $colour['value'] ?>" style="display: none;">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group text-center">
+                                <label><b>Secondary</b></label>
+                                <p>
+                                    <input type="text" name="link" class="form-control preferredHex" value="<?= $colour['link'] ?>" style="display: none;">
+                                </p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="id" value="<?= $colour['id'] ?>">
+                        <div class="col-12 mb-2">
+                            <button class="btn btn-primary btn-block btn-lg" type="submit"><?= lang('app.submit') ?></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endif ?>
 </div>
 <div class="row">
     <div class="col-xl-3 col-lg-6 col-12">

@@ -27,6 +27,10 @@ return [
     'admins' => 'Waratibu',
     'contactUs' => 'Wasiliana nasi',
     'errpg' => 'Ukurasa haujapatikana!',
+    'colour' => 'Rangi',
+    'colours' => 'Rangi',
+    'posta' => 'Sanduku la Posta',
+    'logo' => 'Nembo',
     'ar' => 'Kiarabu',
     'sw' => 'Kiswahili',
 
@@ -38,6 +42,7 @@ return [
 
     // Auth
     'login' => 'Ingia',
+    'regNo' => 'Namba ya Usajili',
     'register' => 'Jisajili',
     'registration' => 'Usajili',
     'admit' => 'Msajili',

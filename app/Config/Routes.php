@@ -47,6 +47,7 @@ $routes->group('web', function ($routes) {
     $routes->post('mauqii', 'WebsiteController::mauqii', ['filter' => 'admin']);
     $routes->post('setting', 'WebsiteController::setting', ['filter' => 'admin']);
     $routes->get('sign/(:num)', 'WebsiteController::sign/$1', ['filter' => 'admin']);
+    $routes->post('signature', 'WebsiteController::signature', ['filter' => 'admin']);
 });
 
 /*
