@@ -48,7 +48,7 @@
                     <li><a href="#campus-life"><?= lang('app.academic') ?></a></li>
                     <li><a href="#about"><?= lang('app.about') ?></a></li>
                     <li><a href="#contact" class="cta-link"><?= lang('app.contactUs') ?></a></li>
-                    <li><a href="<?= base_url('login') ?>" class="cta-link"> <i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="<?= base_url('login') ?>" class="cta-link"> <?= lang('app.login') ?> <i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -59,15 +59,8 @@
     <footer class="main-footer text-center">
         <div class="container grid-4">
             <div class="footer-col">
-                <h4><?= lang('app.contactUs') ?></h4>
-                <?php if (session('lang') != 'ar') : ?>
-                    <p><a href="<?= $location['link'] ?>" target="_blank"><?= $location['value'] ?></a></p>
-                <?php else : ?>
-                    <p><a href="<?= $location['link'] ?>" target="_blank"><?= $location['extra'] ?></a></p>
-                <?php endif ?>
-                <p><a href="#"><?= $email['value'] ?></a></p>
-                <p><a href="tel:+<?= $phone['value'] ?>"><?= $phone['value'] ?></a></p>
-                <p><a href="tel:+<?= $phone['link'] ?>"><?= $phone['link'] ?></a></p>
+                <h4><?= lang('app.language') ?></h4>
+                <li><a href="<?= base_url('login') ?>"><?= lang('app.login') ?></a></li>
             </div>
             <div class="footer-col">
                 <h4><?= lang('app.links') ?></h4>
@@ -75,11 +68,13 @@
                     <li><a href="<?= base_url('login') ?>"><?= lang('app.login') ?></a></li>
                 </ul>
             </div>
-            <div class="footer-col social-media">
-                <h4><?= lang('app.followUs') ?></h4>
-                <a href="https://wa.me/<?= $phone['value'] ?>" target="_blank" aria-label="Facebook"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:<?= $email['value'] ?>" aria-label="LinkedIn"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+<?= $phone['value'] ?>" aria-label="LinkedIn"><i class="fas fa-phone"></i></a>
+            <div class="footer-col-8 social-media">
+                <h4><?= lang('app.contactUs') ?></h4>
+                <a href="mailto:<?= $email['value'] ?>"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+<?= $phone['value'] ?>"><i class="fas fa-phone-alt"></i></a>
+                <a href="tel:+<?= $phone['link'] ?>"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://wa.me/<?= $phone['link'] ?>"><i class="fa fa-whatsapp"></i></a>
+                <a href="<?= $location['link'] ?>"><i class="fas fa-map-marker-alt"></i></a>
             </div>
         </div>
         <div class="container text-center copyright">

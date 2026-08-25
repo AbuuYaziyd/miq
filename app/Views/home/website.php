@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/home') ?>
+<?= $this->extend('layouts/web') ?>
 
 <?= $this->section('content') ?>
 
@@ -24,7 +24,6 @@
 
 <?= $this->include('home/about') ?>
 <?= $this->include('home/impact') ?>
-<?= $this->include('home/contact') ?>
 <?= $this->endSection() ?>
 <?php
 foreach ($hero as $hr) {
