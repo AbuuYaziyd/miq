@@ -9,20 +9,7 @@ use App\Models\Subject;
 use App\Models\User;
 
 class MafsulController extends BaseController
-{
-    // public function index()
-    // {
-    //     $usr = new User();
-
-    //     $user = $usr->find(session('id'));
-    //     $data['title'] = lang('app.feePayment');
-    //     $data['user'] = $user;
-    //     $data['reason'] = lang('app.' . $user['info']);
-    //     // dd($data);
-
-        // return view('home/mafsul', $data);
-    // }
-    
+{   
     public function index()
     {
         $fasl = new Mafsul();

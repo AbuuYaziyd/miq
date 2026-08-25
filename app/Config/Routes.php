@@ -37,8 +37,7 @@ $routes->group('web', function ($routes) {
     $routes->get('about', 'WebsiteController::about', ['filter' => 'admin']);
     $routes->post('about', 'WebsiteController::aboutUpdate', ['filter' => 'admin']);
     $routes->post('about-text', 'WebsiteController::aboutTextUpdate', ['filter' => 'admin']);
-    $routes->get('image/(:num)', 'WebsiteController::image/$1', ['filter' => 'admin']);
-    $routes->post('image', 'WebsiteController::imageChange', ['filter' => 'admin']);
+    $routes->post('image', 'WebsiteController::image', ['filter' => 'admin']);
     $routes->get('delete-image/(:num)', 'WebsiteController::deleteImage/$1', ['filter' => 'admin']);
     $routes->get('admission', 'WebsiteController::admission', ['filter' => 'admin']);
     $routes->post('admission', 'WebsiteController::admissionUpdate', ['filter' => 'admin']);

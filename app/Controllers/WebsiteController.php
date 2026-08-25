@@ -29,7 +29,7 @@ class WebsiteController extends BaseController
         $web = new Website();
 
         $data['title'] = lang('app.website');
-        $data['carousel'] = $web->where('item', 'carousel')->findAll();
+        $data['carousel'] = $web->where('item', 'carousel')->first();
         $data['hero'] = $web->where('item', 'hero')->findAll();
         // dd($data);
 
@@ -93,21 +93,7 @@ class WebsiteController extends BaseController
         }
     }
 
-    function image($id)
-    {
-        helper('form');
-
-        $web = new Website();
-
-        $img = $web->find($id);
-        $data['title'] = lang('app.' . $img['item']);
-        $data['image'] = $web->find($id);
-        // dd($data);
-
-        return view('web/image', $data);
-    }
-
-    function imageChange()
+    function image()
     {
         helper('form');
 
@@ -130,15 +116,11 @@ class WebsiteController extends BaseController
                     ],
                 ]
             );
+            
             // dd($validationRule);
-
             if (!$validationRule) {
-                $data['title'] = lang('app.image');
-                $data['image'] = $web->find($id);
-                $data['validation'] = $this->validator;
-                // dd($data);
-
-                return view('web/image', $data);
+                $error = $this->validator->getError('image');
+                return redirect()->back()->with('type', 'error')->with('title', $error);
             }
 
             $img = $web->find($id)['image'];
@@ -155,25 +137,30 @@ class WebsiteController extends BaseController
             // dd($name);
 
             $dataIMG = [
-                'image' => 'public/images/carousel/' . $name,
+                'image' => 'public/carousel/' . $name,
             ];
 
-            $newImg->move('public/images/carousel/', $name);
+            $newImg->move('public/carousel/', $name);
             $web->update($id, $dataIMG);
 
             $act->addActivity(session('id'), 'Carousel Image Change', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
         }
 
-        return redirect()->to('web')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
     }
 
     function deleteImage($id)
     {
         $web = new Website();
 
-        // $img = $web->find($id);
-        $data = ['image' => null];
-        // dd($data);
+        $img = $web->find($id);
+        $data = ['image' => '#'];
+        // dd($data, $img);
+
+        // dd(file_exists($img['image']));
+        if (file_exists($img['image'])) {
+            unlink($img['image']);
+        }
 
         $web->update($id, $data);
 
