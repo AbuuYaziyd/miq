@@ -27,6 +27,8 @@ return [
     'admins' => 'Waratibu',
     'contactUs' => 'Wasiliana nasi',
     'errpg' => 'Ukurasa haujapatikana!',
+    'ar' => 'Kiarabu',
+    'sw' => 'Kiswahili',
 
     // Admission
     'admission' => 'Usaili',

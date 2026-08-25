@@ -5,8 +5,8 @@ return [
     'welcome' => 'مرحبا',
     'dashboard' => 'الرئيسي',
     'markaz' => 'مركز',
-    'location' => 'كغوما - تنزانيا',
-    'ourLocation' => 'كغوما - تنزانيا',
+    'location' => 'الموقع',
+    'ourLocation' => 'موقعنا',
     'address' => 'عنوان',
     'app' => 'ابن القيم',
     'appName' => 'مركز ابن القيم الإسلامي',
@@ -27,6 +27,8 @@ return [
     'admins' => 'مدراء',
     'contactUs' => 'تواصل معنا',
     'errpg' => 'الصفحة غير موجودة',
+    'ar' => 'العربية',
+    'sw' => 'السواحلية',
 
     // Admission
     'admission' => 'تقديم',

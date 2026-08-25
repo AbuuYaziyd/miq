@@ -16,6 +16,13 @@ class WebsiteController extends BaseController
         $set = new Setting();
 
         $data['title'] = lang('app.website');
+        $data['name'] = $set->where('name', 'name')->first();
+        $data['email'] = $set->where('name', 'email')->first();
+        $data['phone'] = $set->where('name', 'phone')->first();
+        $data['location'] = $set->where('name', 'location')->first();
+        $data['postabox'] = $set->where('name', 'postabox')->first();
+        $data['mudir'] = $set->where('name', 'mudir')->first();
+        $data['taalim'] = $set->where('name', 'taalim')->first();
         $data['mauqii'] = $set->where('name', 'register')->first();
         // dd($data);
 
@@ -116,7 +123,7 @@ class WebsiteController extends BaseController
                     ],
                 ]
             );
-            
+
             // dd($validationRule);
             if (!$validationRule) {
                 $error = $this->validator->getError('image');
@@ -515,5 +522,47 @@ class WebsiteController extends BaseController
         $act->addActivity(session('id'), 'Update Website Content: Hero', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
 
         return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+    }
+
+    function setting()
+    {
+        // dd($this->request->getVar());
+
+        helper('form');
+
+        $set = new Setting();
+        $act = new ActivityLog();
+
+        $id = $this->request->getVar('id');
+        // dd($id);
+
+        $data = [
+            'info'      => $this->request->getVar('info'),
+            'value'     => $this->request->getVar('value'),
+            'extra'     => $this->request->getVar('extra'),
+            'value_ar'  => $this->request->getVar('value_ar'),
+            'extra_ar'  => $this->request->getVar('extra_ar'),
+        ];
+        // dd($data);
+
+        $set->update($id, $data);
+
+        $act->addActivity(session('id'), 'Update Setting Content', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
+
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+    }
+
+    function sign($id)
+    {
+        helper('form');
+
+        $set = new Setting();
+
+        $img = $set->find($id);
+        $data['title'] = lang('app.image');
+        $data['image'] = $set->find($id);
+        // dd($data);
+
+        return view('web/image', $data);
     }
 }

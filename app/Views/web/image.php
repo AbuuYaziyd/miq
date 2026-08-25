@@ -5,13 +5,6 @@
     <div class="container py-5">
         <div class="text-center mb-5">
             <h1><?= $title ?></h1>
-            <?php if (session('lang') != 'ar') : ?>
-                <h2><?= $image['title'] ?></h2>
-                <h3><?= $image['text'] ?></h3>
-            <?php else : ?>
-                <h2><?= $image['title_ar'] ?></h2>
-                <h3><?= $image['text_ar'] ?></h3>
-            <?php endif ?>
             <?php $validation = \Config\Services::validation() ?>
             <?php if ($validation->getError('image')) : ?>
                 <span class="badge badge-danger"> <?= $errors = $validation->getError('image') ?></span>
@@ -31,7 +24,7 @@
                                             <input type="hidden" name="id" value="<?= $image['id'] ?>">
                                             <input type="file" name="image" id="picha" onchange="readURL(this)" style="display: none;">
                                             <label class="mr-1" for="picha">
-                                                <img src="<?= $image['image'] != null ? base_url($image['image']) : base_url('app-assets/images/no-image.jpg') ?>" alt="carousel" id="img" class="users-avatar-shadow" height="350" width="550">
+                                                <img src="<?= $image['link'] != null ? base_url($image['link']) : base_url('app-assets/images/no-image.jpg') ?>" alt="carousel" id="img" class="users-avatar-shadow" height="350" width="550">
                                             </label>
                                         </div>
                                     </div>
@@ -41,7 +34,7 @@
                     </div>
                     <input type="hidden" name="id" value="<?= $image['id'] ?>">
                     <div class="row">
-                        <?php if ($image['image'] != null) : ?>
+                        <?php if ($image['link'] != null) : ?>
                             <div class="col-md-6">
                                 <button type="submit" class="btn btn-block btn-lg btn-primary mb-2"><?= lang('app.edit') ?></button>
                             </div>

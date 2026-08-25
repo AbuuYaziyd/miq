@@ -15,9 +15,11 @@ class Setting extends Model
     protected $allowedFields    = [
         'name',
         'value',
+        'value_ar',
         'link',
         'info',
         'extra',
+        'extra_ar',
     ];
 
     protected bool $allowEmptyInserts = false;
