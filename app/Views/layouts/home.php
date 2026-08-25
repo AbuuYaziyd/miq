@@ -1,34 +1,21 @@
-<?php
-
-use App\Models\Setting;
-
-$set = new Setting();
-
-$markaz = $set->where('name', 'name')->first();
-$colour = $set->where('name', 'colour')->first();
-$location = $set->where('name', 'location')->first();
-$logo = $set->where('name', 'logo')->first();
-?>
 <!DOCTYPE html>
-<html class="loading" lang="<?= session('lang') ?>" data-textdirection="<?= session('lang') != 'ar' ? 'ltr' : 'rtl' ?>">
+<html class="loading" lang="<?= session('lang') ?>" dir="<?= session('lang') != 'ar' ? 'ltr' : 'rtl' ?>">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="<?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
+    <meta name="description" content="<?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
     <meta name="keywords" content="<?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="<?= $colour['value'] ?>">
-    <title><?= $title ?> | <?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?></title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1b877a">
+    <title><?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?></title>
     <link rel="apple-touch-icon" href="<?= base_url($logo['link']) ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url($logo['link']) ?>">
+    <link rel="stylesheet" href="assets/css/style-rtl.css">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <?= $this->renderSection('styles') ?>
-
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea9d69aa5c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -90,10 +77,7 @@ $logo = $set->where('name', 'logo')->first();
             </div>
             <div class="footer-col social-media">
                 <h4><?= lang('app.followUs') ?></h4>
-                <a href="<?= $facebook ?>" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="<?= $whatsapp ?>" target="_blank" aria-label="Facebook"><i class="fab fa-whatsapp"></i></a>
-                <a href="<?= $twitter ?>" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="<?= $telegram ?>" target="_blank" aria-label="LinkedIn"><i class="fab fa-telegram"></i></a>
+                <a href="https://wa.me/<?= $phone['value'] ?>" target="_blank" aria-label="Facebook"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:<?= $email['value'] ?>" aria-label="LinkedIn"><i class="fas fa-envelope"></i></a>
                 <a href="tel:+<?= $phone['value'] ?>" aria-label="LinkedIn"><i class="fas fa-phone"></i></a>
             </div>

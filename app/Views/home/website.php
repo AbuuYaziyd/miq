@@ -24,7 +24,6 @@
 
 <?= $this->include('home/about') ?>
 <?= $this->include('home/impact') ?>
-<?= $this->include('home/admission') ?>
 <?= $this->include('home/contact') ?>
 <?= $this->endSection() ?>
 <?php

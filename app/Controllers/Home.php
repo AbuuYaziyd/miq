@@ -2,24 +2,34 @@
 
 namespace App\Controllers;
 
-use App\Models\Gpa;
-use App\Models\Result;
 use App\Models\Setting;
 use App\Models\Website;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
+        $set = new Setting();
         $web = new Website();
+
+        $mauqii = $set->where('name', 'register')->first();
 
         $data['title'] = lang('app.welcome');
         $data['carousel'] = $web->where('item', 'carousel')->first();
         $data['hero'] = $web->where('item', 'hero')->findAll();
-        // dd($data);
+        $data['email'] = $set->where('name', 'email')->first();
+        $data['phone'] = $set->where('name', 'phone')->first();
+        $data['markaz'] = $set->where('name', 'name')->first();
+        $data['colour'] = $set->where('name', 'colour')->first();
+        $data['location'] = $set->where('name', 'location')->first();
+        $data['logo'] = $set->where('name', 'logo')->first();
+        // dd($data, $mauqii);
 
-        return view('home/index', $data);
-        // return view('home/index', $data);
+        if ($mauqii['link'] != 'checked') {
+            return view('home/index', $data);
+        } else {
+            return view('home/website', $data);
+        }
     }
 
     public function locale($locale)

@@ -45,6 +45,7 @@ $routes->group('web', function ($routes) {
     $routes->get('contact', 'WebsiteController::contact', ['filter' => 'admin']);
     $routes->post('contact', 'WebsiteController::contactUpdate', ['filter' => 'admin']);
     $routes->post('hero', 'WebsiteController::hero', ['filter' => 'admin']);
+    $routes->post('mauqii', 'WebsiteController::mauqii', ['filter' => 'admin']);
 });
 
 /*

@@ -1,12 +1,3 @@
-<?php
-
-use App\Models\Setting;
-
-$set = new Setting();
-
-$location = $set->where('name', 'location')->first();
-$logo = $set->where('name', 'logo')->first();
-?>
 <?= $this->extend('layouts/auth') ?>
 
 <?= $this->section('content') ?>

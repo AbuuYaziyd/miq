@@ -42,6 +42,9 @@ $logo = $set->where('name', 'logo')->first();
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/forms/selects/select2.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/fonts/simple-line-icons/style.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css' . (session('lang') != 'ar' ? '' : '-rtl') . '/core/colors/palette-gradient.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/vendors/css/forms/toggle/switchery.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/plugins/forms/switch.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('app-assets/css/core/colors/palette-switch.css') ?>">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?= $this->renderSection('styles') ?>
@@ -104,6 +107,10 @@ $logo = $set->where('name', 'logo')->first();
     <script src="<?= base_url('app-assets/vendors/js/forms/select/select2.full.min.js') ?>"></script>
     <script src="<?= base_url('app-assets/js/scripts/forms/select/form-select2.js') ?>"></script>
     <script src="<?= base_url('app-assets/js/scripts/gallery/photo-swipe/photoswipe-script.js') ?>"></script>
+    <script src="<?= base_url('app-assets/vendors/js/forms/toggle/bootstrap-switch.min.js') ?>"></script>
+    <script src="<?= base_url('app-assets/vendors/js/forms/toggle/switchery.min.js') ?>"></script>
+    <script src="<?= base_url('app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js') ?>"></script>
+    <script src="<?= base_url('app-assets/js/scripts/forms/switch.js') ?>"></script>
 
     <?= $this->renderSection('scripts') ?>
 

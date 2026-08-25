@@ -11,7 +11,12 @@ class WebsiteController extends BaseController
 {
     public function index()
     {
+        helper('form');
+
+        $set = new Setting();
+
         $data['title'] = lang('app.website');
+        $data['mauqii'] = $set->where('name', 'register')->first();
         // dd($data);
 
         return view('web/index', $data);
@@ -502,5 +507,26 @@ class WebsiteController extends BaseController
         $act->addActivity(session('id'), 'Update Website Content: Hero', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
 
         return redirect()->to('web/carousel')->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
+    }
+
+    function mauqii()
+    {
+        helper('form');
+
+        $set = new Setting();
+        $act = new ActivityLog();
+
+        // dd($this->request->getVar());
+
+        $id = $this->request->getVar('id');
+
+        $data = ['link' => $this->request->getVar('mauqii') != 'on' ? null : 'checked'];
+        // dd($data, $id);
+
+        $set->update($id, $data);
+
+        $act->addActivity(session('id'), 'Update Website Content: Hero', 'Task was Performed by: ' . session('name') . ', email: ' . session('email') . ', username: ' . session('username') . '!');
+
+        return redirect()->back()->with('type', 'success')->with('text', lang('app.successfully'))->with('title', lang('app.done'));
     }
 }
