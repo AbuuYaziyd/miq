@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="#1b877a">
+    <meta name="theme-color" content="<?= $colour['value'] ?>">
     <title><?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?></title>
     <link rel="apple-touch-icon" href="<?= base_url($logo['link']) ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url($logo['link']) ?>">
@@ -17,6 +17,22 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <?= $this->renderSection('styles') ?>
     <script src="https://kit.fontawesome.com/ea9d69aa5c.js" crossorigin="anonymous"></script>
+    <style>
+        .bg-dark {
+            background-color: <?= $colour['value'] ?>;
+            color: #fff;
+        }
+
+        .main-header {
+            background-color: <?= $colour['value'] ?>;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
 </head>
 
 <body>
