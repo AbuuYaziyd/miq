@@ -77,6 +77,9 @@ class GpaController extends BaseController
         $data['mudir'] = $set->where('name', 'mudir')->first();
         $data['taalim'] = $set->where('name', 'taalim')->first();
         $data['colour'] = $set->where('name', 'colour')->first();
+        $data['markaz'] = $set->where('name', 'name')->first();
+        $data['location'] = $set->where('name', 'location')->first();
+        $data['postabox'] = $set->where('name', 'postabox')->first();
         $data['subjects'] = $sub->where('course_id', $fasl)->findAll();
         $data['students'] = $usr->where('level', $fasl)->countAllResults();
         $data['results'] =  $res->where(['student_id' => $id, 'course_id' => $fasl, 'year_id' => $year_id])->findAll();

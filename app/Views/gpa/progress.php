@@ -213,7 +213,7 @@ $alama = 0;
             <div class="footer">
                 <div>
                     <p><?= $mudir['extra'] ?></p>
-                    <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
+                    <img src="<?= base_url($mudir['link']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $mudir['value'] ?><br><?= date('d/m/Y') ?></p>
                 </div>
@@ -225,7 +225,7 @@ $alama = 0;
                 </div>
                 <div>
                     <p><?= $taalim['extra'] ?></p>
-                    <img src="<?= base_url($taalim['info']) ?>" height="50px" alt="sign" />
+                    <img src="<?= base_url($taalim['link']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $taalim['value'] ?><br><?= date('d/m/Y') ?></p>
                 </div>

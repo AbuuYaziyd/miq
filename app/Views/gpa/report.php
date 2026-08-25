@@ -115,20 +115,18 @@
     <div id="printArea" style="direction: <?= service('request')->getLocale() != 'ar' ? 'ltr' : 'rtl' ?>; width: 100%;">
         <div class="header-container">
             <div class="institution-details">
-                <h4 style="color: #806240;">مركز ابن القيم
-                    <br>
-                    <span>ص. ب. 0000,</span>
-                    <span>كغوما - تنزانيا</span>
+                <h4 style="color: <?= $colour['value'] ?>;"><?= $markaz['value_ar'] ?><br>
+                    <span><?= $postabox['value_ar'] ?></span>
+                    <span><?= $location['value_ar'] ?></span>
                 </h4>
             </div>
             <div class="logo-box">
                 <img alt="apple-touch-icon" src="<?= base_url('app-assets/images/logo/logo.png') ?>" height="60px">
             </div>
             <div class="contact-info" dir="ltr">
-                <h4 style="color: #806240;">Markaz Ibn Qayyim
-                    <br>
-                    <span>Po. Box 0000,</span>
-                    <span>Kigoma - Tanzania</span>
+                <h4 style="color: <?= $colour['value'] ?>;"><?= $markaz['value'] ?><br>
+                    <span><?= $postabox['value'] ?></span>
+                    <span><?= $location['value'] ?></span>
                 </h4>
             </div>
         </div>
@@ -223,12 +221,12 @@
             <div>
                 <?php if (session('lang') != 'ar') : ?>
                     <p><?= $mudir['extra_ar'] ?></p>
-                    <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
+                    <img src="<?= base_url($mudir['link']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $mudir['value_ar'] ?><br><?= date('d-m-Y') ?></p>
                 <?php else : ?>
                     <p><?= $mudir['extra'] ?></p>
-                    <img src="<?= base_url($mudir['info']) ?>" height="50px" alt="sign" />
+                    <img src="<?= base_url($mudir['link']) ?>" height="50px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $mudir['value'] ?><br><?= date('d-m-Y') ?></p>
                 <?php endif ?>
@@ -242,12 +240,12 @@
             <div>
                 <?php if (session('lang') != 'ar') : ?>
                     <p><?= $taalim['extra_ar'] ?></p>
-                    <img src="<?= base_url($taalim['info']) ?>" height="35px" alt="sign" />
+                    <img src="<?= base_url($taalim['link']) ?>" height="35px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $taalim['value_ar'] ?><br><?= date('d-m-Y') ?></p>
                 <?php else : ?>
                     <p><?= $taalim['extra'] ?></p>
-                    <img src="<?= base_url($taalim['info']) ?>" height="35px" alt="sign" />
+                    <img src="<?= base_url($taalim['link']) ?>" height="35px" alt="sign" />
                     <div class="signature-line"></div>
                     <p><?= $taalim['value'] ?><br><?= date('d-m-Y') ?></p>
                 <?php endif ?>
