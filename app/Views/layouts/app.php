@@ -45,9 +45,35 @@ $logo = $set->where('name', 'logo')->first();
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?= $this->renderSection('styles') ?>
+    <style>
+        [data-menu='vertical-menu-modern'] .navbar-semi-dark .navbar-container .navbar-nav .nav-link {
+            color: #806240;
+        }
+
+        [data-menu='vertical-menu-modern'] .navbar-light .navbar-header .navbar-nav .nav-link {
+            color: #806240;
+        }
+
+        .navbar-dark {
+            background: #806240;
+        }
+
+        .navbar-dark.navbar-horizontal {
+            background: #806240;
+        }
+
+        .navbar-dark .nav-search .btn-secondary {
+            color: #FFFFFF;
+            background: #806240;
+        }
+
+        .navbar-semi-dark .navbar-header {
+            background: #806240;
+        }
+    </style>
 </head>
 
-<body class="vertical-layout vertical-overlay-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-overlay-menu" data-col="2-columns">
+<body class="vertical-layout vertical-overlay-menu 2-columns fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
 
     <?= $this->include('layouts/header') ?>
