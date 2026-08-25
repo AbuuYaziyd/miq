@@ -1,88 +1,100 @@
+<?php
+
+use App\Models\Setting;
+
+$set = new Setting();
+
+$markaz = $set->where('name', 'name')->first();
+$colour = $set->where('name', 'colour')->first();
+$location = $set->where('name', 'location')->first();
+$logo = $set->where('name', 'logo')->first();
+?>
 <!DOCTYPE html>
-<html class="loading" lang="<?= service('request')->getLocale() ?>" data-textdirection="<?= service('request')->getLocale() != 'ar' ? 'ltr' : 'rtl' ?>">
+<html class="loading" lang="<?= session('lang') ?>" data-textdirection="<?= session('lang') != 'ar' ? 'ltr' : 'rtl' ?>">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="<?= lang('app.appName') . ' | ' . lang('app.location') ?>">
-    <meta name="keywords" content="<?= lang('app.appName') . ' | ' . lang('app.location') ?>">
+    <meta name="description" content="<?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
+    <meta name="keywords" content="<?= lang('app.appName') ?> | <?= session('lang') != 'ar' ? $location['value'] : $location['value_ar'] ?>">
     <meta name="author" content="Abou Yaziyd">
     <link rel="manifest" href="./manifest.json" />
-    <meta name="theme-color" content="#3367D6">
-    <title><?= $title ?> | <?= lang('app.appName') ?></title>
+    <meta name="theme-color" content="<?= $colour['value'] ?>">
+    <title><?= $title ?> | <?= session('lang') != 'ar' ? $markaz['value'] : $markaz['value_ar'] ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('app-assets/images/logo/logo.png') ?>">
-    <style>
-        /* --- General Page and Print Styles --- */
-        body {
-            font-family: 'Tajawal', sans-serif;
-            margin: 0;
-            padding: 1cm;
-            font-size: 12pt;
-        }
+    <link rel="apple-touch-icon" href="<?= base_url($logo['link']) ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url($logo['link']) ?>">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <style>
+            /* --- General Page and Print Styles --- */
+            body {
+                font-family: 'Tajawal', sans-serif;
+                margin: 0;
+                padding: 1cm;
+                font-size: 12pt;
+            }
 
-        @page {
-            margin: 5px;
-        }
+            @page {
+                margin: 5px;
+            }
 
-        .next-page {
-            break-after: always;
-        }
+            .next-page {
+                break-after: always;
+            }
 
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2px;
-        }
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2px;
+            }
 
-        .header-section {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            flex: 1;
-        }
+            .header-section {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                flex: 1;
+            }
 
-        .header-section.right {
-            text-align: right;
-        }
+            .header-section.right {
+                text-align: right;
+            }
 
-        .school-logo {
-            max-width: 100px;
-            height: auto;
-            margin: 0 20px;
-            /* Provides space around the logo */
-        }
+            .school-logo {
+                max-width: 100px;
+                height: auto;
+                margin: 0 20px;
+                /* Provides space around the logo */
+            }
 
-        .school-info {
-            font-size: 14pt;
-        }
+            .school-info {
+                font-size: 14pt;
+            }
 
-        /* --- Table Styling for Report Card --- */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1px;
-            text-align: center;
-        }
+            /* --- Table Styling for Report Card --- */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 1px;
+                text-align: center;
+            }
 
-        th,
-        td {
-            border: 1px solid #000;
-            padding: 2px;
-        }
+            th,
+            td {
+                border: 1px solid #000;
+                padding: 2px;
+            }
 
-        th {
-            background-color: #f2f2f2;
-        }
+            th {
+                background-color: #f2f2f2;
+            }
 
-        tr {
-            page-break-inside: avoid;
-        }
-    </style>
-</head>
+            tr {
+                page-break-inside: avoid;
+            }
+        </style>
+    </head>
 
 <body>
     <div class="next-page">
